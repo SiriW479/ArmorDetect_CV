@@ -1,0 +1,31 @@
+
+#####-----工业相机标定参数-----#####
+R_gimbal2imubody: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+
+# 重投影误差: 0.1032px
+#camera_matrix: [610, 0, 320, 0, 613, 240, 0, 0, 1]
+#distort_coeffs: [0, 0, 0, 0, 0]
+camera_matrix: [1818.3669452465165, 0, 751.06226574703498, 0, 1822.494494078506, 530.43671556112133, 0, 0, 1]
+distort_coeffs: [-0.077944626599568856, 0.15447826031486889, -0.0025714394278524674, 0.00083016311301273629, 0]
+# 相机同理想情况的偏角: yaw0.02 pitch1.94 roll1.40 degree
+# 标定板到世界坐标系原点的水平距离: 4.12 m
+# 标定板同竖直摆放时的偏角: yaw-87.29 pitch7.65 roll-0.51 degree
+R_camera2gimbal: [0, 0, 1,-1, 0, 0,0, -1, 0]
+t_camera2gimbal: [0, 0, 0]
+
+
+#####-----决策参数-----#####
+max_match_distance_: 2
+enemy_color: red
+competition_mode: 0 # 0-3v3  1-超级对抗赛
+min_detect_count: 5
+max_temp_lost_count: 15
+
+#####-----弹道参数-----#####
+yaw_offset: 0.0     #需要实际标定，单位为°
+pitch_offset: 0.0   #需要实际标定，单位为°
+comming_angle: 0.0 #来弹角度，单位为°
+leaving_angle: 0.0 #去弹角度，单位为°
+high_speed_delay_time: 0.03 #高速时延时，单位为s
+low_speed_delay_time: 0.05  #低速时延时，单位为s
+decision_speed_: 2.0 #低速/高速切换阈值，单位为m/s
