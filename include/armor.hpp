@@ -15,6 +15,9 @@ enum Color
 
 struct LightBar
 {
+    float angle;
+    float width;
+    float height;
     cv::Point2f center; // 中心点
     cv::Point2f top;    // 上方点
     cv::Point2f bottom; // 下方点

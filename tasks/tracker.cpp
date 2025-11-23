@@ -22,6 +22,12 @@ Tracker::Tracker(const std::string & config_path, PnpSolver & solver)
   enemy_color_ = (yaml["enemy_color"].as<std::string>() == "red") ? Color::red : Color::blue;
   min_detect_count_ = yaml["min_detect_count"].as<int>();
   max_temp_lost_count_ = yaml["max_temp_lost_count"].as<int>();
+
+  std::cout << "[Debug] Tracker constructed with config: " << config_path
+            << ", enemy_color=" << (enemy_color_ == Color::red ? "red" : "blue")
+            << ", min_detect_count=" << min_detect_count_
+            << ", max_temp_lost_count=" << max_temp_lost_count_
+            << std::endl;
 }
 
 std::string Tracker::state() const { return state_; }
@@ -30,7 +36,11 @@ std::vector<Target> Tracker::track(
   std::vector<Armor> & armors, std::chrono::steady_clock::time_point t)
 {
   auto dt = tools::delta_time(t, last_timestamp_);
-                    last_timestamp_ = t;
+  last_timestamp_ = t;
+
+  std::cout << "[Debug] Tracker::track state=" << state_
+            << ", received_armors=" << armors.size()
+            << ", dt=" << dt << std::endl;
 
   // if (state_ != "lost" && dt > 0.1) {
   //   std::cout<<"[Tracker] Large dt: {:.3f}s"<< dt<<std::endl;
@@ -38,8 +48,8 @@ std::vector<Target> Tracker::track(
   // }
 
   // 过滤掉非我方装甲板
-  auto it = std::remove_if(armors.begin(), armors.end(), [&](const Armor & a) { return a.color != enemy_color_; });
-  armors.erase(it, armors.end());
+  // auto it = std::remove_if(armors.begin(), armors.end(), [&](const Armor & a) { return a.color != enemy_color_; });
+  // armors.erase(it, armors.end());
 
   // 过滤前哨站顶部装甲板
   // armors.remove_if([this](const auto_aim::Armor & a) {
@@ -168,6 +178,8 @@ bool Tracker::set_target(std::vector<Armor> & armors, std::chrono::steady_clock:
 
   auto & armor = armors.front();
   solver_._solve_pnp(armor);
+
+  std::cout << "[Debug] Tracker is setting a new target, EKF will be initialized." << std::endl;
 
 //   // 根据兵种优化初始化参数
 //   auto is_balance = (armor.type == ArmorType::big) &&

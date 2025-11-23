@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.10)
 project(ArmorTask)
 
 # 设置 C++ 标准
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 # 指定 OpenCV 安装路径
-set(OpenCV_DIR "/home/wxy/Downloads/opencv-4.12.0/install/lib/cmake/opencv4")
+#set(OpenCV_DIR "/home/wxy/Downloads/opencv-4.12.0/install/lib/cmake/opencv4")
 find_package(OpenCV REQUIRED)
 
 
@@ -61,10 +61,13 @@ set(SOURCES
 # 编译视频测试可执行文件
 add_executable(vedio_test test/auto_aim_vedio_test.cpp ${SOURCES})
 
-# 编译摄像头测试可执行文件
-add_executable(camera_test test/camera_auto_aim_test.cpp ${SOURCES})
+# 编译检测测试可执行文件
+add_executable(detect_test test/detect_test.cpp ${SOURCES})
 
-add_executable(imu_test test/imu_test.cpp ${SOURCES})
+# 编译摄像头测试可执行文件
+# add_executable(camera_test test/camera_auto_aim_test.cpp ${SOURCES})
+
+# add_executable(imu_test test/imu_test.cpp ${SOURCES})
 
 
 # 链接 ROS 2 的库
@@ -72,14 +75,16 @@ add_executable(imu_test test/imu_test.cpp ${SOURCES})
 
 # 链接测试可执行文件
 target_link_libraries(vedio_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
-target_link_libraries(camera_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
-target_link_libraries(imu_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
+target_link_libraries(detect_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
+# target_link_libraries(camera_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
+# target_link_libraries(imu_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
 
 
 # 添加编译选项
 target_compile_options(vedio_test PRIVATE -Wall -Wextra)
-target_compile_options(camera_test PRIVATE -Wall -Wextra)
-target_compile_options(imu_test PRIVATE -Wall -Wextra)
+target_compile_options(detect_test PRIVATE -Wall -Wextra)
+# target_compile_options(camera_test PRIVATE -Wall -Wextra)
+# target_compile_options(imu_test PRIVATE -Wall -Wextra)
 
 # 设置构建类型为 Debug
 set(CMAKE_BUILD_TYPE Debug)
@@ -87,6 +92,7 @@ set(CMAKE_BUILD_TYPE Debug)
 # 如果是 Debug 模式，添加调试选项
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_options(vedio_test PRIVATE -g)
-    target_compile_options(camera_test PRIVATE -g)
-    target_compile_options(imu_test PRIVATE -g)
+    target_compile_options(detect_test PRIVATE -g)
+    # target_compile_options(camera_test PRIVATE -g)
+    # target_compile_options(imu_test PRIVATE -g)
 endif()

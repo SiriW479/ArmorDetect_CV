@@ -15,7 +15,6 @@ class Tracker
 {
 public:
   Tracker(const std::string & config_path, PnpSolver & solver);
-  Tracker() = default;
 
   std::string state() const;
 
@@ -23,7 +22,7 @@ public:
   std::vector<Armor> & armors, std::chrono::steady_clock::time_point t);
 
 private:
-  PnpSolver & solver_;
+  PnpSolver& solver_;
   Color enemy_color_;
   int min_detect_count_;
   int max_temp_lost_count_;

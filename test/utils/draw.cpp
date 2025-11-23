@@ -207,9 +207,17 @@ std::pair<cv::Mat, cv::Mat> loadCameraParameters(const std::string& config_path)
 
 // 绘制装甲板检测结果
 void drawArmorDetection(cv::Mat& img, const ArmorArray& armors) {
-    // 从当前目录相对路径加载相机参数
-    auto camera_params = loadCameraParameters("../config/demo.yaml");
-    cv::Mat camera_matrix = camera_params.first;
+    static bool camera_params_initialized = false;
+    static cv::Mat camera_matrix;
+    static cv::Mat distort_coeffs;
+
+    if (!camera_params_initialized) {
+        auto camera_params = loadCameraParameters("../config/demo.yaml");
+        camera_matrix = camera_params.first;
+        distort_coeffs = camera_params.second;
+        camera_params_initialized = true;
+        std::cout << "[Debug] drawArmorDetection loaded camera parameters once." << std::endl;
+    }
 
     for (const auto& armor : armors) {
         // 绘制装甲板中心点

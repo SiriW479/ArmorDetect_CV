@@ -1,6 +1,6 @@
 #include "../include/armor.hpp"
 #include "detector.hpp"
-#include "img_tools.hpp"
+#include "utils/draw.hpp"
 #include "pnp_solver.hpp"
 #include "tracker.hpp"
 #include "utils/draw.hpp"
@@ -196,9 +196,12 @@ int main(int argc, char *argv[])
     try {
         // 实例化功能组件
         std::cout << "Initializing components..." << std::endl;
-        Detector detector("/home/wxy/NJU_RMVision/armor_task/models/yolov8_armor.onnx");
-        PnpSolver pnp_solver("/home/wxy/NJU_RMVision/armor_task/config/demo.yaml");
-        Tracker tracker("/home/wxy/NJU_RMVision/armor_task/config/demo.yaml", pnp_solver);
+        Detector detector;
+        PnpSolver pnp_solver("/home/wxy/ArmorDetect_CV/config/demo.yaml");
+        Tracker tracker("/home/wxy/ArmorDetect_CV/config/demo.yaml", pnp_solver);
+    std::cout << "[Debug] Detector instance: " << &detector << std::endl;
+    std::cout << "[Debug] PnpSolver instance: " << &pnp_solver << std::endl;
+    std::cout << "[Debug] Tracker instance: " << &tracker << std::endl;
 
         // 打开视频
         cv::VideoCapture cap(video_path);
@@ -213,10 +216,9 @@ int main(int argc, char *argv[])
         double video_fps = cap.get(cv::CAP_PROP_FPS);
         int total_frames = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_COUNT));
 
-        std::cout << "Video Info:" << std::endl;
-        std::cout << "  Resolution: " << frame_width << "x" << frame_height << std::endl;
-        std::cout << "  FPS: " << video_fps << std::endl;
-        std::cout << "  Total Frames: " << total_frames << std::endl;
+      std::cout << "Video Info: Resolution: " << frame_width << "x" << frame_height
+            << ", FPS: " << video_fps
+            << ", Total Frames: " << total_frames << std::endl;
 
         cv::Mat frame;
         int frame_count = 0;
@@ -255,10 +257,12 @@ int main(int argc, char *argv[])
                     std::cout << "[Armor " << i << "] "
                               << "ID: " << armor.detect_id
                               << ", Num: " << armor.car_num
-                              << ", Confidence: " << armor.confidence
+                              << ", Confidence: " << std::fixed << std::setprecision(3) << armor.confidence
                               << ", Box: (" << armor.box.x << "," << armor.box.y << "," << armor.box.width << "," << armor.box.height << ")"
                               << ", Center: (" << armor.center.x << "," << armor.center.y << ")"
                               << std::endl;
+                    std::cout.unsetf(std::ios::floatfield);
+                    std::cout << std::defaultfloat << std::setprecision(6);
                 }
 
                 // 追踪阶段
@@ -291,11 +295,14 @@ int main(int argc, char *argv[])
 
                 // 控制台输出
                 if (frame_count % 30 == 0) {
-                    std::cout << "\rProcessing frame " << frame_count << "/" << total_frames 
-                              << " | FPS: " << std::setprecision(3) << fps 
-                              << " | Detected: " << detected_armors.size() 
-                              << " | Tracking: " << targets.size() 
-                              << " | State: " << tracker.state() << std::flush;
+                    std::cout << "Processing frame " << frame_count << "/" << total_frames
+                              << " | FPS: " << std::fixed << std::setprecision(2) << fps
+                              << " | Detected: " << detected_armors.size()
+                              << " | Tracking: " << targets.size()
+                              << " | State: " << tracker.state()
+                              << std::endl;
+                    std::cout.unsetf(std::ios::floatfield);
+                    std::cout << std::defaultfloat << std::setprecision(6);
                 }
             }
 
@@ -308,7 +315,7 @@ int main(int argc, char *argv[])
                 break;
             } else if (key == 'p') { // 'p' 暂停/恢复
                 paused = !paused;
-                std::cout << (paused ? "\nPaused" : "\nResumed") << std::endl;
+                std::cout << (paused ? "Paused" : "Resumed") << std::endl;
             } else if (key == ' ' && paused) { // 空格键单步执行
                 if (cap.read(frame)) {
                     frame_count++;
@@ -321,10 +328,11 @@ int main(int argc, char *argv[])
         auto total_duration = std::chrono::duration<double>(end_time - start_time).count();
         double avg_fps = frame_count / total_duration;
 
-        std::cout << "\n\nProcessing completed!" << std::endl;
-        std::cout << "Total frames processed: " << frame_count << std::endl;
-        std::cout << "Total time: " << std::setprecision(3) << total_duration << " seconds" << std::endl;
-        std::cout << "Average FPS: " << std::setprecision(3) << avg_fps << std::endl;
+    std::cout << "Processing completed! Total frames processed: " << frame_count
+          << ", Total time: " << std::fixed << std::setprecision(3) << total_duration << " seconds"
+          << ", Average FPS: " << avg_fps << std::endl;
+    std::cout.unsetf(std::ios::floatfield);
+    std::cout << std::setprecision(6);
 
         // 清理资源
         cap.release();

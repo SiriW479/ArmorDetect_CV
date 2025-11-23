@@ -1,5 +1,6 @@
 #include "pnp_solver.hpp"
 #include <cmath>
+#include <iostream>
 #include <opencv2/calib3d.hpp>
 #include <yaml-cpp/yaml.h>
 #include "../tools/math_tools.hpp"
@@ -38,6 +39,10 @@ PnpSolver::PnpSolver(const std::string & config_path) : R_gimbal2world_(Eigen::M
     Eigen::Matrix<double, 1, 5> distort_coeffs(distort_coeffs_data.data());
     cv::eigen2cv(camera_matrix, camera_matrix_);
     cv::eigen2cv(distort_coeffs, distort_coeffs_);
+
+  std::cout << "[Debug] PnpSolver constructed with config: " << config_path << std::endl;
+  std::cout << "[Debug] camera_matrix:\n" << camera_matrix_ << std::endl;
+  std::cout << "[Debug] distort_coeffs:\n" << distort_coeffs_ << std::endl;
 }
 
 //only debug use
@@ -102,6 +107,13 @@ bool PnpSolver::_solve_pnp(Armor &armor)
     {
         return false;
     }
+
+  std::cout << "[Debug] Armor car_num=" << armor.car_num << " corners:";
+  for (const auto & corner : armor.corners)
+  {
+    std::cout << " (" << corner.x << ", " << corner.y << ")";
+  }
+  std::cout << std::endl;
 
     cv::Mat rvec, tvec;
     bool success = cv::solvePnP(armor_points_, armor.corners, camera_matrix_, distort_coeffs_, rvec, tvec, false, cv::SOLVEPNP_ITERATIVE);

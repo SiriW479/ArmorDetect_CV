@@ -25,10 +25,10 @@ class Detector
     // 用于设置敌方颜色
     void set_enemy_color(Color color);
 
-  private:
     // 模块一：图像预处理
     cv::Mat preprocess_image(const cv::Mat &frame);
 
+  private:
     // 模块二：寻找灯条
     void find_lightbars(const cv::Mat &frame, std::vector<LightBar> &light_bars);
 
@@ -37,5 +37,13 @@ class Detector
 
   private:
     Color enemy_color_; // 敌方颜色
+
+    // ========== 识别参数 ==========
+    // 预处理
+    int threshold_;
+
+    // 匹配装甲板
+    float armor_min_width_ratio_;
+    float armor_max_width_ratio_;
 };
 } // namespace armor_task

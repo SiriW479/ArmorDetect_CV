@@ -26,6 +26,7 @@ Target::Target(
   auto center_y = xyz[1] + r * std::sin(ypr[0]);
   auto center_z = xyz[2];
  
+  std::cout << "[Debug] Target constructor called. Creating EKF..." << std::endl;
 
   Eigen::VectorXd x0(11);
   x0 << center_x, 0, center_y, 0, center_z, 0, ypr[0], 0, r, 0, 0;  //初始化预测量
@@ -42,6 +43,7 @@ Target::Target(
 
     
   ekf_ = Ekf(x0, P0, x_add);  //初始化滤波器（预测量、预测量协方差）
+  std::cout << "[Debug] EKF created successfully." << std::endl;
 }
 
 void Target::predict(std::chrono::steady_clock::time_point t)
@@ -54,7 +56,6 @@ void Target::predict(std::chrono::steady_clock::time_point t)
 
 void Target::predict(double dt)
 {
-  dt = 0.05;
   // 状态转移矩阵 (常速度模型)
   // clang-format off
   Eigen::MatrixXd F{
