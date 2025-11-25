@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wxy/ArmorDetect_CV
+CMAKE_SOURCE_DIR = /home/user/wxy/ArmorDetect_CV
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wxy/ArmorDetect_CV/build
+CMAKE_BINARY_DIR = /home/user/wxy/ArmorDetect_CV/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/detect_test.dir/depend.make
@@ -72,142 +72,142 @@ include CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/test/detect_test.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/test/detect_test.cpp.o: ../test/detect_test.cpp
 CMakeFiles/detect_test.dir/test/detect_test.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/detect_test.dir/test/detect_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/test/detect_test.cpp.o -MF CMakeFiles/detect_test.dir/test/detect_test.cpp.o.d -o CMakeFiles/detect_test.dir/test/detect_test.cpp.o -c /home/wxy/ArmorDetect_CV/test/detect_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/detect_test.dir/test/detect_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/test/detect_test.cpp.o -MF CMakeFiles/detect_test.dir/test/detect_test.cpp.o.d -o CMakeFiles/detect_test.dir/test/detect_test.cpp.o -c /home/user/wxy/ArmorDetect_CV/test/detect_test.cpp
 
 CMakeFiles/detect_test.dir/test/detect_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/test/detect_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/test/detect_test.cpp > CMakeFiles/detect_test.dir/test/detect_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/test/detect_test.cpp > CMakeFiles/detect_test.dir/test/detect_test.cpp.i
 
 CMakeFiles/detect_test.dir/test/detect_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/test/detect_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/test/detect_test.cpp -o CMakeFiles/detect_test.dir/test/detect_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/test/detect_test.cpp -o CMakeFiles/detect_test.dir/test/detect_test.cpp.s
 
 CMakeFiles/detect_test.dir/tasks/detector.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tasks/detector.cpp.o: ../tasks/detector.cpp
 CMakeFiles/detect_test.dir/tasks/detector.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/detect_test.dir/tasks/detector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/detector.cpp.o -MF CMakeFiles/detect_test.dir/tasks/detector.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/detector.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/detect_test.dir/tasks/detector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/detector.cpp.o -MF CMakeFiles/detect_test.dir/tasks/detector.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/detector.cpp.o -c /home/user/wxy/ArmorDetect_CV/tasks/detector.cpp
 
 CMakeFiles/detect_test.dir/tasks/detector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tasks/detector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/detector.cpp > CMakeFiles/detect_test.dir/tasks/detector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tasks/detector.cpp > CMakeFiles/detect_test.dir/tasks/detector.cpp.i
 
 CMakeFiles/detect_test.dir/tasks/detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tasks/detector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/detector.cpp -o CMakeFiles/detect_test.dir/tasks/detector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tasks/detector.cpp -o CMakeFiles/detect_test.dir/tasks/detector.cpp.s
 
 CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o: ../tasks/pnp_solver.cpp
 CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o -MF CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o -MF CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o -c /home/user/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp
 
 CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp > CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp > CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.i
 
 CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp -o CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp -o CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.s
 
 CMakeFiles/detect_test.dir/tasks/tracker.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tasks/tracker.cpp.o: ../tasks/tracker.cpp
 CMakeFiles/detect_test.dir/tasks/tracker.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/detect_test.dir/tasks/tracker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/tracker.cpp.o -MF CMakeFiles/detect_test.dir/tasks/tracker.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/tracker.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/tracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/detect_test.dir/tasks/tracker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/tracker.cpp.o -MF CMakeFiles/detect_test.dir/tasks/tracker.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/tracker.cpp.o -c /home/user/wxy/ArmorDetect_CV/tasks/tracker.cpp
 
 CMakeFiles/detect_test.dir/tasks/tracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tasks/tracker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/tracker.cpp > CMakeFiles/detect_test.dir/tasks/tracker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tasks/tracker.cpp > CMakeFiles/detect_test.dir/tasks/tracker.cpp.i
 
 CMakeFiles/detect_test.dir/tasks/tracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tasks/tracker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/tracker.cpp -o CMakeFiles/detect_test.dir/tasks/tracker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tasks/tracker.cpp -o CMakeFiles/detect_test.dir/tasks/tracker.cpp.s
 
 CMakeFiles/detect_test.dir/tasks/ekf.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tasks/ekf.cpp.o: ../tasks/ekf.cpp
 CMakeFiles/detect_test.dir/tasks/ekf.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/detect_test.dir/tasks/ekf.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/ekf.cpp.o -MF CMakeFiles/detect_test.dir/tasks/ekf.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/ekf.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/ekf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/detect_test.dir/tasks/ekf.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/ekf.cpp.o -MF CMakeFiles/detect_test.dir/tasks/ekf.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/ekf.cpp.o -c /home/user/wxy/ArmorDetect_CV/tasks/ekf.cpp
 
 CMakeFiles/detect_test.dir/tasks/ekf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tasks/ekf.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/ekf.cpp > CMakeFiles/detect_test.dir/tasks/ekf.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tasks/ekf.cpp > CMakeFiles/detect_test.dir/tasks/ekf.cpp.i
 
 CMakeFiles/detect_test.dir/tasks/ekf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tasks/ekf.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/ekf.cpp -o CMakeFiles/detect_test.dir/tasks/ekf.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tasks/ekf.cpp -o CMakeFiles/detect_test.dir/tasks/ekf.cpp.s
 
 CMakeFiles/detect_test.dir/tasks/target.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tasks/target.cpp.o: ../tasks/target.cpp
 CMakeFiles/detect_test.dir/tasks/target.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/detect_test.dir/tasks/target.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/target.cpp.o -MF CMakeFiles/detect_test.dir/tasks/target.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/target.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/target.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/detect_test.dir/tasks/target.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tasks/target.cpp.o -MF CMakeFiles/detect_test.dir/tasks/target.cpp.o.d -o CMakeFiles/detect_test.dir/tasks/target.cpp.o -c /home/user/wxy/ArmorDetect_CV/tasks/target.cpp
 
 CMakeFiles/detect_test.dir/tasks/target.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tasks/target.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/target.cpp > CMakeFiles/detect_test.dir/tasks/target.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tasks/target.cpp > CMakeFiles/detect_test.dir/tasks/target.cpp.i
 
 CMakeFiles/detect_test.dir/tasks/target.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tasks/target.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/target.cpp -o CMakeFiles/detect_test.dir/tasks/target.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tasks/target.cpp -o CMakeFiles/detect_test.dir/tasks/target.cpp.s
 
 CMakeFiles/detect_test.dir/tools/logger.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tools/logger.cpp.o: ../tools/logger.cpp
 CMakeFiles/detect_test.dir/tools/logger.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/detect_test.dir/tools/logger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tools/logger.cpp.o -MF CMakeFiles/detect_test.dir/tools/logger.cpp.o.d -o CMakeFiles/detect_test.dir/tools/logger.cpp.o -c /home/wxy/ArmorDetect_CV/tools/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/detect_test.dir/tools/logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tools/logger.cpp.o -MF CMakeFiles/detect_test.dir/tools/logger.cpp.o.d -o CMakeFiles/detect_test.dir/tools/logger.cpp.o -c /home/user/wxy/ArmorDetect_CV/tools/logger.cpp
 
 CMakeFiles/detect_test.dir/tools/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tools/logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tools/logger.cpp > CMakeFiles/detect_test.dir/tools/logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tools/logger.cpp > CMakeFiles/detect_test.dir/tools/logger.cpp.i
 
 CMakeFiles/detect_test.dir/tools/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tools/logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tools/logger.cpp -o CMakeFiles/detect_test.dir/tools/logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tools/logger.cpp -o CMakeFiles/detect_test.dir/tools/logger.cpp.s
 
 CMakeFiles/detect_test.dir/tools/math_tools.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/tools/math_tools.cpp.o: ../tools/math_tools.cpp
 CMakeFiles/detect_test.dir/tools/math_tools.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/detect_test.dir/tools/math_tools.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tools/math_tools.cpp.o -MF CMakeFiles/detect_test.dir/tools/math_tools.cpp.o.d -o CMakeFiles/detect_test.dir/tools/math_tools.cpp.o -c /home/wxy/ArmorDetect_CV/tools/math_tools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/detect_test.dir/tools/math_tools.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/tools/math_tools.cpp.o -MF CMakeFiles/detect_test.dir/tools/math_tools.cpp.o.d -o CMakeFiles/detect_test.dir/tools/math_tools.cpp.o -c /home/user/wxy/ArmorDetect_CV/tools/math_tools.cpp
 
 CMakeFiles/detect_test.dir/tools/math_tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/tools/math_tools.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tools/math_tools.cpp > CMakeFiles/detect_test.dir/tools/math_tools.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/tools/math_tools.cpp > CMakeFiles/detect_test.dir/tools/math_tools.cpp.i
 
 CMakeFiles/detect_test.dir/tools/math_tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/tools/math_tools.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tools/math_tools.cpp -o CMakeFiles/detect_test.dir/tools/math_tools.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/tools/math_tools.cpp -o CMakeFiles/detect_test.dir/tools/math_tools.cpp.s
 
 CMakeFiles/detect_test.dir/test/utils/draw.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/test/utils/draw.cpp.o: ../test/utils/draw.cpp
 CMakeFiles/detect_test.dir/test/utils/draw.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/detect_test.dir/test/utils/draw.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/test/utils/draw.cpp.o -MF CMakeFiles/detect_test.dir/test/utils/draw.cpp.o.d -o CMakeFiles/detect_test.dir/test/utils/draw.cpp.o -c /home/wxy/ArmorDetect_CV/test/utils/draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/detect_test.dir/test/utils/draw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/test/utils/draw.cpp.o -MF CMakeFiles/detect_test.dir/test/utils/draw.cpp.o.d -o CMakeFiles/detect_test.dir/test/utils/draw.cpp.o -c /home/user/wxy/ArmorDetect_CV/test/utils/draw.cpp
 
 CMakeFiles/detect_test.dir/test/utils/draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/test/utils/draw.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/test/utils/draw.cpp > CMakeFiles/detect_test.dir/test/utils/draw.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/test/utils/draw.cpp > CMakeFiles/detect_test.dir/test/utils/draw.cpp.i
 
 CMakeFiles/detect_test.dir/test/utils/draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/test/utils/draw.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/test/utils/draw.cpp -o CMakeFiles/detect_test.dir/test/utils/draw.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/test/utils/draw.cpp -o CMakeFiles/detect_test.dir/test/utils/draw.cpp.s
 
 CMakeFiles/detect_test.dir/io/communication.cpp.o: CMakeFiles/detect_test.dir/flags.make
 CMakeFiles/detect_test.dir/io/communication.cpp.o: ../io/communication.cpp
 CMakeFiles/detect_test.dir/io/communication.cpp.o: CMakeFiles/detect_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/detect_test.dir/io/communication.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/io/communication.cpp.o -MF CMakeFiles/detect_test.dir/io/communication.cpp.o.d -o CMakeFiles/detect_test.dir/io/communication.cpp.o -c /home/wxy/ArmorDetect_CV/io/communication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/detect_test.dir/io/communication.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/detect_test.dir/io/communication.cpp.o -MF CMakeFiles/detect_test.dir/io/communication.cpp.o.d -o CMakeFiles/detect_test.dir/io/communication.cpp.o -c /home/user/wxy/ArmorDetect_CV/io/communication.cpp
 
 CMakeFiles/detect_test.dir/io/communication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect_test.dir/io/communication.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/io/communication.cpp > CMakeFiles/detect_test.dir/io/communication.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/wxy/ArmorDetect_CV/io/communication.cpp > CMakeFiles/detect_test.dir/io/communication.cpp.i
 
 CMakeFiles/detect_test.dir/io/communication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect_test.dir/io/communication.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/io/communication.cpp -o CMakeFiles/detect_test.dir/io/communication.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/wxy/ArmorDetect_CV/io/communication.cpp -o CMakeFiles/detect_test.dir/io/communication.cpp.s
 
 # Object files for target detect_test
 detect_test_OBJECTS = \
@@ -236,66 +236,78 @@ detect_test: CMakeFiles/detect_test.dir/tools/math_tools.cpp.o
 detect_test: CMakeFiles/detect_test.dir/test/utils/draw.cpp.o
 detect_test: CMakeFiles/detect_test.dir/io/communication.cpp.o
 detect_test: CMakeFiles/detect_test.dir/build.make
-detect_test: /home/wxy/anaconda3/lib/libopencv_gapi.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_stitching.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_alphamat.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_aruco.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_barcode.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_bgsegm.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_bioinspired.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_ccalib.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_cvv.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_dnn_objdetect.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_dnn_superres.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_dpm.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_face.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_freetype.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_fuzzy.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_hdf.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_hfs.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_img_hash.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_intensity_transform.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_line_descriptor.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_mcc.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_quality.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_rapid.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_reg.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_rgbd.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_saliency.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_stereo.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_structured_light.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_superres.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_surface_matching.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_tracking.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_videostab.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_wechat_qrcode.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_xfeatures2d.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_xobjdetect.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_xphoto.so.4.6.0
+detect_test: /usr/local/lib/libopencv_gapi.so.4.13.0
+detect_test: /usr/local/lib/libopencv_stitching.so.4.13.0
+detect_test: /usr/local/lib/libopencv_alphamat.so.4.13.0
+detect_test: /usr/local/lib/libopencv_aruco.so.4.13.0
+detect_test: /usr/local/lib/libopencv_bgsegm.so.4.13.0
+detect_test: /usr/local/lib/libopencv_bioinspired.so.4.13.0
+detect_test: /usr/local/lib/libopencv_ccalib.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudabgsegm.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudafeatures2d.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudaobjdetect.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudastereo.so.4.13.0
+detect_test: /usr/local/lib/libopencv_dnn_objdetect.so.4.13.0
+detect_test: /usr/local/lib/libopencv_dnn_superres.so.4.13.0
+detect_test: /usr/local/lib/libopencv_dpm.so.4.13.0
+detect_test: /usr/local/lib/libopencv_face.so.4.13.0
+detect_test: /usr/local/lib/libopencv_freetype.so.4.13.0
+detect_test: /usr/local/lib/libopencv_fuzzy.so.4.13.0
+detect_test: /usr/local/lib/libopencv_hdf.so.4.13.0
+detect_test: /usr/local/lib/libopencv_hfs.so.4.13.0
+detect_test: /usr/local/lib/libopencv_img_hash.so.4.13.0
+detect_test: /usr/local/lib/libopencv_intensity_transform.so.4.13.0
+detect_test: /usr/local/lib/libopencv_line_descriptor.so.4.13.0
+detect_test: /usr/local/lib/libopencv_mcc.so.4.13.0
+detect_test: /usr/local/lib/libopencv_quality.so.4.13.0
+detect_test: /usr/local/lib/libopencv_rapid.so.4.13.0
+detect_test: /usr/local/lib/libopencv_reg.so.4.13.0
+detect_test: /usr/local/lib/libopencv_rgbd.so.4.13.0
+detect_test: /usr/local/lib/libopencv_saliency.so.4.13.0
+detect_test: /usr/local/lib/libopencv_sfm.so.4.13.0
+detect_test: /usr/local/lib/libopencv_signal.so.4.13.0
+detect_test: /usr/local/lib/libopencv_stereo.so.4.13.0
+detect_test: /usr/local/lib/libopencv_structured_light.so.4.13.0
+detect_test: /usr/local/lib/libopencv_superres.so.4.13.0
+detect_test: /usr/local/lib/libopencv_surface_matching.so.4.13.0
+detect_test: /usr/local/lib/libopencv_tracking.so.4.13.0
+detect_test: /usr/local/lib/libopencv_videostab.so.4.13.0
+detect_test: /usr/local/lib/libopencv_wechat_qrcode.so.4.13.0
+detect_test: /usr/local/lib/libopencv_xfeatures2d.so.4.13.0
+detect_test: /usr/local/lib/libopencv_xobjdetect.so.4.13.0
+detect_test: /usr/local/lib/libopencv_xphoto.so.4.13.0
 detect_test: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.9.2
-detect_test: /home/wxy/anaconda3/lib/libopencv_shape.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_highgui.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_datasets.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_plot.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_text.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_ml.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_phase_unwrapping.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_optflow.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_ximgproc.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_video.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_videoio.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_imgcodecs.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_objdetect.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_calib3d.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_dnn.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_features2d.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_flann.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_photo.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_imgproc.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libopencv_core.so.4.6.0
-detect_test: /home/wxy/anaconda3/lib/libfmt.so.9.1.0
+detect_test: /usr/local/lib/libopencv_shape.so.4.13.0
+detect_test: /usr/local/lib/libopencv_highgui.so.4.13.0
+detect_test: /usr/local/lib/libopencv_datasets.so.4.13.0
+detect_test: /usr/local/lib/libopencv_plot.so.4.13.0
+detect_test: /usr/local/lib/libopencv_text.so.4.13.0
+detect_test: /usr/local/lib/libopencv_ml.so.4.13.0
+detect_test: /usr/local/lib/libopencv_phase_unwrapping.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudacodec.so.4.13.0
+detect_test: /usr/local/lib/libopencv_videoio.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudaoptflow.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudalegacy.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudawarping.so.4.13.0
+detect_test: /usr/local/lib/libopencv_optflow.so.4.13.0
+detect_test: /usr/local/lib/libopencv_ximgproc.so.4.13.0
+detect_test: /usr/local/lib/libopencv_video.so.4.13.0
+detect_test: /usr/local/lib/libopencv_imgcodecs.so.4.13.0
+detect_test: /usr/local/lib/libopencv_objdetect.so.4.13.0
+detect_test: /usr/local/lib/libopencv_calib3d.so.4.13.0
+detect_test: /usr/local/lib/libopencv_dnn.so.4.13.0
+detect_test: /usr/local/lib/libopencv_features2d.so.4.13.0
+detect_test: /usr/local/lib/libopencv_flann.so.4.13.0
+detect_test: /usr/local/lib/libopencv_photo.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudaimgproc.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudafilters.so.4.13.0
+detect_test: /usr/local/lib/libopencv_imgproc.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudaarithm.so.4.13.0
+detect_test: /usr/local/lib/libopencv_core.so.4.13.0
+detect_test: /usr/local/lib/libopencv_cudev.so.4.13.0
+detect_test: /opt/anaconda3/lib/libfmt.so.9.1.0
 detect_test: CMakeFiles/detect_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable detect_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable detect_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/detect_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -307,6 +319,6 @@ CMakeFiles/detect_test.dir/clean:
 .PHONY : CMakeFiles/detect_test.dir/clean
 
 CMakeFiles/detect_test.dir/depend:
-	cd /home/wxy/ArmorDetect_CV/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wxy/ArmorDetect_CV /home/wxy/ArmorDetect_CV /home/wxy/ArmorDetect_CV/build /home/wxy/ArmorDetect_CV/build /home/wxy/ArmorDetect_CV/build/CMakeFiles/detect_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/wxy/ArmorDetect_CV/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/wxy/ArmorDetect_CV /home/user/wxy/ArmorDetect_CV /home/user/wxy/ArmorDetect_CV/build /home/user/wxy/ArmorDetect_CV/build /home/user/wxy/ArmorDetect_CV/build/CMakeFiles/detect_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/detect_test.dir/depend
 

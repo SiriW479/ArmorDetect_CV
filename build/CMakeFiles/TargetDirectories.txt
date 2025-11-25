@@ -1,4 +1,4 @@
-/home/wxy/ArmorDetect_CV/build/CMakeFiles/vedio_test.dir
-/home/wxy/ArmorDetect_CV/build/CMakeFiles/detect_test.dir
-/home/wxy/ArmorDetect_CV/build/CMakeFiles/edit_cache.dir
-/home/wxy/ArmorDetect_CV/build/CMakeFiles/rebuild_cache.dir
+/home/user/wxy/ArmorDetect_CV/build/CMakeFiles/vedio_test.dir
+/home/user/wxy/ArmorDetect_CV/build/CMakeFiles/detect_test.dir
+/home/user/wxy/ArmorDetect_CV/build/CMakeFiles/edit_cache.dir
+/home/user/wxy/ArmorDetect_CV/build/CMakeFiles/rebuild_cache.dir

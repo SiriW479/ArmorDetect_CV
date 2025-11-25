@@ -5,7 +5,7 @@ project(ArmorTask)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-rpath,/usr/lib/x86_64-linux-gnu")
 # 指定 OpenCV 安装路径
 #set(OpenCV_DIR "/home/wxy/Downloads/opencv-4.12.0/install/lib/cmake/opencv4")
 find_package(OpenCV REQUIRED)
