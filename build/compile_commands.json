@@ -1,0 +1,102 @@
+[
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/test/auto_aim_vedio_test.cpp.o -c /home/wxy/ArmorDetect_CV/test/auto_aim_vedio_test.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/test/auto_aim_vedio_test.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tasks/detector.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/detector.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/detector.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/tracker.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/tracker.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tasks/ekf.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/ekf.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/ekf.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tasks/target.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/target.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/target.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tools/logger.cpp.o -c /home/wxy/ArmorDetect_CV/tools/logger.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tools/logger.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o -c /home/wxy/ArmorDetect_CV/tools/math_tools.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tools/math_tools.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o -c /home/wxy/ArmorDetect_CV/test/utils/draw.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/test/utils/draw.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/vedio_test.dir/io/communication.cpp.o -c /home/wxy/ArmorDetect_CV/io/communication.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/io/communication.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/test/detect_test.cpp.o -c /home/wxy/ArmorDetect_CV/test/detect_test.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/test/detect_test.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tasks/detector.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/detector.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/detector.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/pnp_solver.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tasks/tracker.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/tracker.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/tracker.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tasks/ekf.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/ekf.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/ekf.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tasks/target.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/target.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tasks/target.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tools/logger.cpp.o -c /home/wxy/ArmorDetect_CV/tools/logger.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tools/logger.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/tools/math_tools.cpp.o -c /home/wxy/ArmorDetect_CV/tools/math_tools.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/tools/math_tools.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/test/utils/draw.cpp.o -c /home/wxy/ArmorDetect_CV/test/utils/draw.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/test/utils/draw.cpp"
+},
+{
+  "directory": "/home/wxy/ArmorDetect_CV/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include -g -Wall -Wextra -g -std=gnu++17 -o CMakeFiles/detect_test.dir/io/communication.cpp.o -c /home/wxy/ArmorDetect_CV/io/communication.cpp",
+  "file": "/home/wxy/ArmorDetect_CV/io/communication.cpp"
+}
+]

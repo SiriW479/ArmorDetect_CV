@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB
 
-CXX_INCLUDES = -I/home/user/wxy/ArmorDetect_CV/include -I/home/user/wxy/ArmorDetect_CV/tasks -I/home/user/wxy/ArmorDetect_CV/tools -I/home/user/wxy/ArmorDetect_CV/test -I/home/user/wxy/ArmorDetect_CV/test/utils -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -isystem /opt/anaconda3/include
+CXX_INCLUDES = -I/home/wxy/ArmorDetect_CV/include -I/home/wxy/ArmorDetect_CV/tasks -I/home/wxy/ArmorDetect_CV/tools -I/home/wxy/ArmorDetect_CV/test -I/home/wxy/ArmorDetect_CV/test/utils -I/home/wxy/anaconda3/include/eigen3 -isystem /home/wxy/anaconda3/include/opencv4 -isystem /home/wxy/anaconda3/include
 
 CXX_FLAGS = -g -Wall -Wextra -g -std=gnu++17
 
