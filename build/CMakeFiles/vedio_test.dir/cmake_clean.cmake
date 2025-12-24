@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/vedio_test.dir/io/communication.cpp.o"
   "CMakeFiles/vedio_test.dir/io/communication.cpp.o.d"
+  "CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o"
+  "CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o.d"
   "CMakeFiles/vedio_test.dir/tasks/detector.cpp.o"
   "CMakeFiles/vedio_test.dir/tasks/detector.cpp.o.d"
   "CMakeFiles/vedio_test.dir/tasks/ekf.cpp.o"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/vedio_test.dir/tasks/target.cpp.o.d"
   "CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o"
   "CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o.d"
+  "CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o"
+  "CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o.d"
   "CMakeFiles/vedio_test.dir/test/auto_aim_vedio_test.cpp.o"
   "CMakeFiles/vedio_test.dir/test/auto_aim_vedio_test.cpp.o.d"
   "CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o"

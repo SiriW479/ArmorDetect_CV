@@ -312,7 +312,7 @@ double PnpSolver::armor_reprojection_error(
 
 
 std::vector<cv::Point2f> PnpSolver::reproject_armor(
-  const Eigen::Vector3d & p_world, double yaw, int car_num,bool islarge) const
+  const Eigen::Vector3d & p_world, double yaw, [[maybe_unused]] int car_num, bool islarge) const
 {
   auto sin_yaw = std::sin(yaw);
   auto cos_yaw = std::cos(yaw);
@@ -349,3 +349,4 @@ std::vector<cv::Point2f> PnpSolver::reproject_armor(
   cv::projectPoints(object_points, rvec, tvec, camera_matrix_, distort_coeffs_, image_points);
   return image_points;
 }
+

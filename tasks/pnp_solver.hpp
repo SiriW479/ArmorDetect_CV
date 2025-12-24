@@ -64,13 +64,9 @@ class PnpSolver
     cv::Mat distort_coeffs_;             // 畸变系数
     std::vector<cv::Point3f> armor_points_; // 装甲板3D模型点
 
-    static constexpr float SMALL_ARMOR_WIDTH = 0.135; // m
-    static constexpr float SMALL_ARMOR_HEIGHT = 0.056; // m
-    static constexpr float LARGE_ARMOR_WIDTH = 0.230; // m
-    static constexpr float LARGE_ARMOR_HEIGHT = 0.056; //m
-
     // 初始化装甲板3D模型点
     void initArmorPoints(bool is_large_armor);
 
    
 };
+

@@ -142,6 +142,19 @@ detect_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/build
 .PHONY : detect_test/fast
 
+#=============================================================================
+# Target rules for targets named ablation_study_test
+
+# Build rule for target.
+ablation_study_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ablation_study_test
+.PHONY : ablation_study_test
+
+# fast build rule for target.
+ablation_study_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/build
+.PHONY : ablation_study_test/fast
+
 io/communication.o: io/communication.cpp.o
 .PHONY : io/communication.o
 
@@ -149,6 +162,7 @@ io/communication.o: io/communication.cpp.o
 io/communication.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/io/communication.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/io/communication.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/io/communication.cpp.o
 .PHONY : io/communication.cpp.o
 
 io/communication.i: io/communication.cpp.i
@@ -158,6 +172,7 @@ io/communication.i: io/communication.cpp.i
 io/communication.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/io/communication.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/io/communication.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/io/communication.cpp.i
 .PHONY : io/communication.cpp.i
 
 io/communication.s: io/communication.cpp.s
@@ -167,7 +182,38 @@ io/communication.s: io/communication.cpp.s
 io/communication.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/io/communication.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/io/communication.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/io/communication.cpp.s
 .PHONY : io/communication.cpp.s
+
+tasks/aimer.o: tasks/aimer.cpp.o
+.PHONY : tasks/aimer.o
+
+# target to build an object file
+tasks/aimer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/aimer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/aimer.cpp.o
+.PHONY : tasks/aimer.cpp.o
+
+tasks/aimer.i: tasks/aimer.cpp.i
+.PHONY : tasks/aimer.i
+
+# target to preprocess a source file
+tasks/aimer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/aimer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/aimer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/aimer.cpp.i
+.PHONY : tasks/aimer.cpp.i
+
+tasks/aimer.s: tasks/aimer.cpp.s
+.PHONY : tasks/aimer.s
+
+# target to generate assembly for a file
+tasks/aimer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/aimer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/aimer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/aimer.cpp.s
+.PHONY : tasks/aimer.cpp.s
 
 tasks/detector.o: tasks/detector.cpp.o
 .PHONY : tasks/detector.o
@@ -176,6 +222,7 @@ tasks/detector.o: tasks/detector.cpp.o
 tasks/detector.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/detector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/detector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/detector.cpp.o
 .PHONY : tasks/detector.cpp.o
 
 tasks/detector.i: tasks/detector.cpp.i
@@ -185,6 +232,7 @@ tasks/detector.i: tasks/detector.cpp.i
 tasks/detector.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/detector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/detector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/detector.cpp.i
 .PHONY : tasks/detector.cpp.i
 
 tasks/detector.s: tasks/detector.cpp.s
@@ -194,6 +242,7 @@ tasks/detector.s: tasks/detector.cpp.s
 tasks/detector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/detector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/detector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/detector.cpp.s
 .PHONY : tasks/detector.cpp.s
 
 tasks/ekf.o: tasks/ekf.cpp.o
@@ -203,6 +252,7 @@ tasks/ekf.o: tasks/ekf.cpp.o
 tasks/ekf.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/ekf.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/ekf.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/ekf.cpp.o
 .PHONY : tasks/ekf.cpp.o
 
 tasks/ekf.i: tasks/ekf.cpp.i
@@ -212,6 +262,7 @@ tasks/ekf.i: tasks/ekf.cpp.i
 tasks/ekf.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/ekf.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/ekf.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/ekf.cpp.i
 .PHONY : tasks/ekf.cpp.i
 
 tasks/ekf.s: tasks/ekf.cpp.s
@@ -221,6 +272,7 @@ tasks/ekf.s: tasks/ekf.cpp.s
 tasks/ekf.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/ekf.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/ekf.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/ekf.cpp.s
 .PHONY : tasks/ekf.cpp.s
 
 tasks/pnp_solver.o: tasks/pnp_solver.cpp.o
@@ -230,6 +282,7 @@ tasks/pnp_solver.o: tasks/pnp_solver.cpp.o
 tasks/pnp_solver.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/pnp_solver.cpp.o
 .PHONY : tasks/pnp_solver.cpp.o
 
 tasks/pnp_solver.i: tasks/pnp_solver.cpp.i
@@ -239,6 +292,7 @@ tasks/pnp_solver.i: tasks/pnp_solver.cpp.i
 tasks/pnp_solver.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/pnp_solver.cpp.i
 .PHONY : tasks/pnp_solver.cpp.i
 
 tasks/pnp_solver.s: tasks/pnp_solver.cpp.s
@@ -248,6 +302,7 @@ tasks/pnp_solver.s: tasks/pnp_solver.cpp.s
 tasks/pnp_solver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/pnp_solver.cpp.s
 .PHONY : tasks/pnp_solver.cpp.s
 
 tasks/target.o: tasks/target.cpp.o
@@ -257,6 +312,7 @@ tasks/target.o: tasks/target.cpp.o
 tasks/target.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/target.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/target.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/target.cpp.o
 .PHONY : tasks/target.cpp.o
 
 tasks/target.i: tasks/target.cpp.i
@@ -266,6 +322,7 @@ tasks/target.i: tasks/target.cpp.i
 tasks/target.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/target.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/target.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/target.cpp.i
 .PHONY : tasks/target.cpp.i
 
 tasks/target.s: tasks/target.cpp.s
@@ -275,6 +332,7 @@ tasks/target.s: tasks/target.cpp.s
 tasks/target.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/target.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/target.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/target.cpp.s
 .PHONY : tasks/target.cpp.s
 
 tasks/tracker.o: tasks/tracker.cpp.o
@@ -284,6 +342,7 @@ tasks/tracker.o: tasks/tracker.cpp.o
 tasks/tracker.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/tracker.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/tracker.cpp.o
 .PHONY : tasks/tracker.cpp.o
 
 tasks/tracker.i: tasks/tracker.cpp.i
@@ -293,6 +352,7 @@ tasks/tracker.i: tasks/tracker.cpp.i
 tasks/tracker.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/tracker.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/tracker.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/tracker.cpp.i
 .PHONY : tasks/tracker.cpp.i
 
 tasks/tracker.s: tasks/tracker.cpp.s
@@ -302,7 +362,62 @@ tasks/tracker.s: tasks/tracker.cpp.s
 tasks/tracker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/tracker.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/tracker.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/tracker.cpp.s
 .PHONY : tasks/tracker.cpp.s
+
+tasks/trajectory_normal.o: tasks/trajectory_normal.cpp.o
+.PHONY : tasks/trajectory_normal.o
+
+# target to build an object file
+tasks/trajectory_normal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/trajectory_normal.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/trajectory_normal.cpp.o
+.PHONY : tasks/trajectory_normal.cpp.o
+
+tasks/trajectory_normal.i: tasks/trajectory_normal.cpp.i
+.PHONY : tasks/trajectory_normal.i
+
+# target to preprocess a source file
+tasks/trajectory_normal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/trajectory_normal.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/trajectory_normal.cpp.i
+.PHONY : tasks/trajectory_normal.cpp.i
+
+tasks/trajectory_normal.s: tasks/trajectory_normal.cpp.s
+.PHONY : tasks/trajectory_normal.s
+
+# target to generate assembly for a file
+tasks/trajectory_normal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/trajectory_normal.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/trajectory_normal.cpp.s
+.PHONY : tasks/trajectory_normal.cpp.s
+
+test/ablation_study_test.o: test/ablation_study_test.cpp.o
+.PHONY : test/ablation_study_test.o
+
+# target to build an object file
+test/ablation_study_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/ablation_study_test.cpp.o
+.PHONY : test/ablation_study_test.cpp.o
+
+test/ablation_study_test.i: test/ablation_study_test.cpp.i
+.PHONY : test/ablation_study_test.i
+
+# target to preprocess a source file
+test/ablation_study_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/ablation_study_test.cpp.i
+.PHONY : test/ablation_study_test.cpp.i
+
+test/ablation_study_test.s: test/ablation_study_test.cpp.s
+.PHONY : test/ablation_study_test.s
+
+# target to generate assembly for a file
+test/ablation_study_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/ablation_study_test.cpp.s
+.PHONY : test/ablation_study_test.cpp.s
 
 test/auto_aim_vedio_test.o: test/auto_aim_vedio_test.cpp.o
 .PHONY : test/auto_aim_vedio_test.o
@@ -359,6 +474,7 @@ test/utils/draw.o: test/utils/draw.cpp.o
 test/utils/draw.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/utils/draw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/utils/draw.cpp.o
 .PHONY : test/utils/draw.cpp.o
 
 test/utils/draw.i: test/utils/draw.cpp.i
@@ -368,6 +484,7 @@ test/utils/draw.i: test/utils/draw.cpp.i
 test/utils/draw.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/test/utils/draw.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/utils/draw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/utils/draw.cpp.i
 .PHONY : test/utils/draw.cpp.i
 
 test/utils/draw.s: test/utils/draw.cpp.s
@@ -377,6 +494,7 @@ test/utils/draw.s: test/utils/draw.cpp.s
 test/utils/draw.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/test/utils/draw.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/utils/draw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/utils/draw.cpp.s
 .PHONY : test/utils/draw.cpp.s
 
 tools/logger.o: tools/logger.cpp.o
@@ -386,6 +504,7 @@ tools/logger.o: tools/logger.cpp.o
 tools/logger.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/logger.cpp.o
 .PHONY : tools/logger.cpp.o
 
 tools/logger.i: tools/logger.cpp.i
@@ -395,6 +514,7 @@ tools/logger.i: tools/logger.cpp.i
 tools/logger.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/logger.cpp.i
 .PHONY : tools/logger.cpp.i
 
 tools/logger.s: tools/logger.cpp.s
@@ -404,6 +524,7 @@ tools/logger.s: tools/logger.cpp.s
 tools/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/logger.cpp.s
 .PHONY : tools/logger.cpp.s
 
 tools/math_tools.o: tools/math_tools.cpp.o
@@ -413,6 +534,7 @@ tools/math_tools.o: tools/math_tools.cpp.o
 tools/math_tools.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/math_tools.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/math_tools.cpp.o
 .PHONY : tools/math_tools.cpp.o
 
 tools/math_tools.i: tools/math_tools.cpp.i
@@ -422,6 +544,7 @@ tools/math_tools.i: tools/math_tools.cpp.i
 tools/math_tools.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/math_tools.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/math_tools.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/math_tools.cpp.i
 .PHONY : tools/math_tools.cpp.i
 
 tools/math_tools.s: tools/math_tools.cpp.s
@@ -431,6 +554,7 @@ tools/math_tools.s: tools/math_tools.cpp.s
 tools/math_tools.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/math_tools.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/math_tools.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/math_tools.cpp.s
 .PHONY : tools/math_tools.cpp.s
 
 # Help Target
@@ -441,11 +565,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ablation_study_test"
 	@echo "... detect_test"
 	@echo "... vedio_test"
 	@echo "... io/communication.o"
 	@echo "... io/communication.i"
 	@echo "... io/communication.s"
+	@echo "... tasks/aimer.o"
+	@echo "... tasks/aimer.i"
+	@echo "... tasks/aimer.s"
 	@echo "... tasks/detector.o"
 	@echo "... tasks/detector.i"
 	@echo "... tasks/detector.s"
@@ -461,6 +589,12 @@ help:
 	@echo "... tasks/tracker.o"
 	@echo "... tasks/tracker.i"
 	@echo "... tasks/tracker.s"
+	@echo "... tasks/trajectory_normal.o"
+	@echo "... tasks/trajectory_normal.i"
+	@echo "... tasks/trajectory_normal.s"
+	@echo "... test/ablation_study_test.o"
+	@echo "... test/ablation_study_test.i"
+	@echo "... test/ablation_study_test.s"
 	@echo "... test/auto_aim_vedio_test.o"
 	@echo "... test/auto_aim_vedio_test.i"
 	@echo "... test/auto_aim_vedio_test.s"

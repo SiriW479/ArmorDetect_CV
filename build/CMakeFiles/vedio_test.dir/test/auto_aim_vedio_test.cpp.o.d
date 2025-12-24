@@ -597,4 +597,17 @@ CMakeFiles/vedio_test.dir/test/auto_aim_vedio_test.cpp.o: \
  /home/wxy/ArmorDetect_CV/tasks/target.hpp /usr/include/c++/11/optional \
  /home/wxy/ArmorDetect_CV/tools/math_tools.hpp \
  /home/wxy/anaconda3/include/eigen3/Eigen/Geometry \
- /home/wxy/ArmorDetect_CV/tasks/ekf.hpp
+ /home/wxy/ArmorDetect_CV/tasks/ekf.hpp \
+ /home/wxy/ArmorDetect_CV/tasks/aimer.hpp \
+ /home/wxy/ArmorDetect_CV/tasks/../io/communication.hpp \
+ /usr/include/termios.h /usr/include/x86_64-linux-gnu/bits/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h

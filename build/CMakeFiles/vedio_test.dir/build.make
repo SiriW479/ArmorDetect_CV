@@ -139,10 +139,38 @@ CMakeFiles/vedio_test.dir/tasks/ekf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vedio_test.dir/tasks/ekf.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/ekf.cpp -o CMakeFiles/vedio_test.dir/tasks/ekf.cpp.s
 
+CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o: CMakeFiles/vedio_test.dir/flags.make
+CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o: ../tasks/aimer.cpp
+CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o -MF CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o.d -o CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/aimer.cpp
+
+CMakeFiles/vedio_test.dir/tasks/aimer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vedio_test.dir/tasks/aimer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/aimer.cpp > CMakeFiles/vedio_test.dir/tasks/aimer.cpp.i
+
+CMakeFiles/vedio_test.dir/tasks/aimer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vedio_test.dir/tasks/aimer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/aimer.cpp -o CMakeFiles/vedio_test.dir/tasks/aimer.cpp.s
+
+CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o: CMakeFiles/vedio_test.dir/flags.make
+CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o: ../tasks/trajectory_normal.cpp
+CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o -MF CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o.d -o CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/trajectory_normal.cpp
+
+CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wxy/ArmorDetect_CV/tasks/trajectory_normal.cpp > CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.i
+
+CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wxy/ArmorDetect_CV/tasks/trajectory_normal.cpp -o CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.s
+
 CMakeFiles/vedio_test.dir/tasks/target.cpp.o: CMakeFiles/vedio_test.dir/flags.make
 CMakeFiles/vedio_test.dir/tasks/target.cpp.o: ../tasks/target.cpp
 CMakeFiles/vedio_test.dir/tasks/target.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vedio_test.dir/tasks/target.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vedio_test.dir/tasks/target.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/tasks/target.cpp.o -MF CMakeFiles/vedio_test.dir/tasks/target.cpp.o.d -o CMakeFiles/vedio_test.dir/tasks/target.cpp.o -c /home/wxy/ArmorDetect_CV/tasks/target.cpp
 
 CMakeFiles/vedio_test.dir/tasks/target.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/vedio_test.dir/tasks/target.cpp.s: cmake_force
 CMakeFiles/vedio_test.dir/tools/logger.cpp.o: CMakeFiles/vedio_test.dir/flags.make
 CMakeFiles/vedio_test.dir/tools/logger.cpp.o: ../tools/logger.cpp
 CMakeFiles/vedio_test.dir/tools/logger.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vedio_test.dir/tools/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/vedio_test.dir/tools/logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/tools/logger.cpp.o -MF CMakeFiles/vedio_test.dir/tools/logger.cpp.o.d -o CMakeFiles/vedio_test.dir/tools/logger.cpp.o -c /home/wxy/ArmorDetect_CV/tools/logger.cpp
 
 CMakeFiles/vedio_test.dir/tools/logger.cpp.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/vedio_test.dir/tools/logger.cpp.s: cmake_force
 CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o: CMakeFiles/vedio_test.dir/flags.make
 CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o: ../tools/math_tools.cpp
 CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o -MF CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o.d -o CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o -c /home/wxy/ArmorDetect_CV/tools/math_tools.cpp
 
 CMakeFiles/vedio_test.dir/tools/math_tools.cpp.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/vedio_test.dir/tools/math_tools.cpp.s: cmake_force
 CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o: CMakeFiles/vedio_test.dir/flags.make
 CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o: ../test/utils/draw.cpp
 CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o -MF CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o.d -o CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o -c /home/wxy/ArmorDetect_CV/test/utils/draw.cpp
 
 CMakeFiles/vedio_test.dir/test/utils/draw.cpp.i: cmake_force
@@ -198,7 +226,7 @@ CMakeFiles/vedio_test.dir/test/utils/draw.cpp.s: cmake_force
 CMakeFiles/vedio_test.dir/io/communication.cpp.o: CMakeFiles/vedio_test.dir/flags.make
 CMakeFiles/vedio_test.dir/io/communication.cpp.o: ../io/communication.cpp
 CMakeFiles/vedio_test.dir/io/communication.cpp.o: CMakeFiles/vedio_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/vedio_test.dir/io/communication.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/vedio_test.dir/io/communication.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vedio_test.dir/io/communication.cpp.o -MF CMakeFiles/vedio_test.dir/io/communication.cpp.o.d -o CMakeFiles/vedio_test.dir/io/communication.cpp.o -c /home/wxy/ArmorDetect_CV/io/communication.cpp
 
 CMakeFiles/vedio_test.dir/io/communication.cpp.i: cmake_force
@@ -216,6 +244,8 @@ vedio_test_OBJECTS = \
 "CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.o" \
 "CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o" \
 "CMakeFiles/vedio_test.dir/tasks/ekf.cpp.o" \
+"CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o" \
+"CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o" \
 "CMakeFiles/vedio_test.dir/tasks/target.cpp.o" \
 "CMakeFiles/vedio_test.dir/tools/logger.cpp.o" \
 "CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o" \
@@ -230,6 +260,8 @@ vedio_test: CMakeFiles/vedio_test.dir/tasks/detector.cpp.o
 vedio_test: CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.o
 vedio_test: CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o
 vedio_test: CMakeFiles/vedio_test.dir/tasks/ekf.cpp.o
+vedio_test: CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o
+vedio_test: CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o
 vedio_test: CMakeFiles/vedio_test.dir/tasks/target.cpp.o
 vedio_test: CMakeFiles/vedio_test.dir/tools/logger.cpp.o
 vedio_test: CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o
@@ -295,7 +327,7 @@ vedio_test: /home/wxy/anaconda3/lib/libopencv_imgproc.so.4.6.0
 vedio_test: /home/wxy/anaconda3/lib/libopencv_core.so.4.6.0
 vedio_test: /home/wxy/anaconda3/lib/libfmt.so.9.1.0
 vedio_test: CMakeFiles/vedio_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable vedio_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wxy/ArmorDetect_CV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable vedio_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vedio_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

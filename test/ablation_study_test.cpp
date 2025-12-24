@@ -3,6 +3,7 @@
 #include "utils/draw.hpp"
 #include "pnp_solver.hpp"
 #include <opencv2/opencv.hpp>
+#include <opencv2/core/eigen.hpp>
 #include <chrono>
 #include <iostream>
 #include <iomanip>
@@ -20,10 +21,10 @@ cv::Mat camera_matrix = (cv::Mat_<double>(3, 3) << 610, 0, 320, 0, 613, 240, 0, 
 cv::Mat distort_coeffs = (cv::Mat_<double>(1, 5) << 0, 0, 0, 0, 0);
 
 // 测试视频路径
-std::string video_path = "./test_video.avi";  // 需要修改为实际路径
+std::string video_path = "/home/wxy/Downloads/circular1.avi";
 
 // 配置路径
-const std::string config_path = "./config/demo.yaml";
+const std::string config_path = "/home/wxy/ArmorDetect_CV/config/demo.yaml";
 
 /**
  * @brief 计算重投影误差（欧氏距离）
@@ -96,11 +97,6 @@ double optimized_solvePnP(Armor & armor, PnpSolver & pnp_solver)
   if (!success) {
     return -1.0;
   }
-
-  // 重投影验证
-  bool islarge = (armor.car_num == 1 || armor.car_num == 4);
-  const std::vector<cv::Point3f> & armor_points = 
-    islarge ? pnp_solver.BIG_ARMOR_POINTS : pnp_solver.SMALL_ARMOR_POINTS;
 
   // 使用优化后的yaw角重新计算重投影
   auto reprojected_points = pnp_solver.reproject_armor(
@@ -317,12 +313,12 @@ void generateVisualization(const std::string & filename, const AblationStats & s
   // 绘制图例
   cv::line(visualization, cv::Point(50, plot_height + 20), cv::Point(100, plot_height + 20),
            cv::Scalar(255, 0, 0), 2);
-  cv::putText(visualization, "Baseline (No Optimization)", cv::Point(110, plot_height + 25),
+  cv::putText(visualization, "With Optimization", cv::Point(110, plot_height + 25),
               cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0), 1);
 
   cv::line(visualization, cv::Point(450, plot_height + 20), cv::Point(500, plot_height + 20),
            cv::Scalar(0, 255, 0), 2);
-  cv::putText(visualization, "Optimized (With SJTU_cost + optimize_yaw)", 
+  cv::putText(visualization, "Baseline (No Optimization)", 
               cv::Point(510, plot_height + 25),
               cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0), 1);
 
@@ -330,7 +326,7 @@ void generateVisualization(const std::string & filename, const AblationStats & s
   std::cout << "[Info] Visualization saved to: " << filename << std::endl;
 }
 
-int main(int argc, char * argv[])
+int main([[maybe_unused]] int argc, [[maybe_unused]] char * argv[])
 {
   try {
     std::cout << "=== Ablation Study: SJTU_cost & optimize_yaw ===" << std::endl;
@@ -427,3 +423,4 @@ int main(int argc, char * argv[])
     return -1;
   }
 }
+

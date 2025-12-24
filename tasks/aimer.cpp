@@ -7,8 +7,8 @@
 
 
 #include "../tools/math_tools.hpp"
+#include "../tools/logger.hpp"
 #include "trajectory_normal.hpp"
-
 
 Aimer::Aimer(const std::string & config_path)
 {
@@ -64,8 +64,8 @@ io::Command Aimer::aim(
   auto d0 = std::sqrt(xyz0[0] * xyz0[0] + xyz0[1] * xyz0[1]);
   tools::Trajectory trajectory0(bullet_speed, d0, xyz0[2]);
   if (trajectory0.unsolvable) {
-    tools::logger()->debug(
-      "[Aimer] Unsolvable trajectory0: {:.2f} {:.2f} {:.2f}", bullet_speed, d0, xyz0[2]);
+    // tools::logger()->debug(
+    //   "[Aimer] Unsolvable trajectory0: {:.2f} {:.2f} {:.2f}", bullet_speed, d0, xyz0[2]);
     debug_aim_point.valid = false;
     return {false, false, 0, 0};
   }
@@ -73,7 +73,7 @@ io::Command Aimer::aim(
   // 迭代求解飞行时间 (最多10次，收敛条件：相邻两次fly_time差 <0.001)
   bool converged = false;
   double prev_fly_time = trajectory0.fly_time;
-  Trajectory current_traj = trajectory0;
+  tools::Trajectory current_traj = trajectory0;
   std::vector<Target> iteration_target(10, target);  // 创建10个目标副本用于迭代预测
 
   for (int iter = 0; iter < 10; ++iter) {
@@ -91,7 +91,7 @@ io::Command Aimer::aim(
     // 计算新弹道
     Eigen::Vector3d xyz = aim_point.xyza.head(3);
     double d = std::sqrt(xyz.x() * xyz.x() + xyz.y() * xyz.y());
-    current_traj = Trajectory(bullet_speed, d, xyz.z());
+    current_traj = tools::Trajectory(bullet_speed, d, xyz.z());
 
     // 检查弹道是否可解
     if (current_traj.unsolvable) {
@@ -114,7 +114,7 @@ io::Command Aimer::aim(
   Eigen::Vector3d final_xyz = debug_aim_point.xyza.head(3);
   double yaw = std::atan2(final_xyz.y(), final_xyz.x()) + yaw_offset_;
   double pitch = -(current_traj.pitch + pitch_offset_);  //世界坐标系下pitch向上为负
-  return {true, false, yaw, pitch};
+  return {true, false, static_cast<float>(yaw), static_cast<float>(pitch)};
 }
 
 
@@ -131,7 +131,7 @@ AimPoint Aimer::choose_aim_point(const Target & target)
 
   // 如果delta_angle为0，则该装甲板中心和整车中心的连线在世界坐标系的xy平面过原点
   std::vector<double> delta_angle_list;
-  for (int i = 0; i < armor_num; i++) {
+  for (size_t i = 0; i < armor_num; i++) {
     auto delta_angle = tools::limit_rad(armor_xyza_list[i][3] - center_yaw);
     delta_angle_list.emplace_back(delta_angle);
   }
@@ -140,13 +140,13 @@ AimPoint Aimer::choose_aim_point(const Target & target)
   if (std::abs(target.ekf_x()[8]) <= 2 ) {
     // 选择在可射击范围内的装甲板
     std::vector<int> id_list;
-    for (int i = 0; i < armor_num; i++) {
+    for (size_t i = 0; i < armor_num; i++) {
       if (std::abs(delta_angle_list[i]) > 60 / 57.3) continue;
       id_list.push_back(i);
     }
     // 绝无可能
     if (id_list.empty()) {
-      tools::logger()->warn("Empty id list!");
+      // tools::logger()->warn("Empty id list!");
       return {false, armor_xyza_list[0]};
     }
 
@@ -171,7 +171,7 @@ AimPoint Aimer::choose_aim_point(const Target & target)
   leaving_angle = leaving_angle_;
   
   // 在小陀螺时，一侧的装甲板不断出现，另一侧的装甲板不断消失，显然前者被打中的概率更高
-  for (int i = 0; i < armor_num; i++) {
+  for (size_t i = 0; i < armor_num; i++) {
     if (std::abs(delta_angle_list[i]) > coming_angle) continue;
     if (ekf_x[7] > 0 && delta_angle_list[i] < leaving_angle) return {true, armor_xyza_list[i]};
     if (ekf_x[7] < 0 && delta_angle_list[i] > -leaving_angle) return {true, armor_xyza_list[i]};
@@ -179,3 +179,4 @@ AimPoint Aimer::choose_aim_point(const Target & target)
 
   return {false, armor_xyza_list[0]};
 }
+

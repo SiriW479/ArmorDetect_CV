@@ -1,4 +1,4 @@
-#include "trajectory.hpp"
+#include "trajectory_normal.hpp"
 
 #include <cmath>
 
