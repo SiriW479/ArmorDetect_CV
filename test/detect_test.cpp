@@ -7,7 +7,7 @@
 using namespace armor_task;
 
 // 测试视频路径
-std::string video_path = "/home/user/Downloads/circular1.avi";
+std::string video_path = "/home/wxy/Downloads/circular1.avi";
 
 int main(int argc, char *argv[])
 {

@@ -19,7 +19,7 @@ cv::Mat camera_matrix = (cv::Mat_<double>(3, 3) << 610, 0, 320, 0, 613, 240, 0, 
 cv::Mat distort_coeffs = (cv::Mat_<double>(1, 5) << 0, 0, 0, 0, 0);
 
 // 测试视频路径
-std::string video_path = "/home/user/Downloads/circular1.avi";
+std::string video_path = "/home/wxy/Downloads/circular1.avi";
 
 // // 绘制装甲板检测结果
 // void drawArmorDetection(cv::Mat& img, const ArmorArray& armors) {
@@ -194,8 +194,8 @@ int main(int argc, char *argv[])
         // 实例化功能组件
         std::cout << "Initializing components..." << std::endl;
         Detector detector;
-        PnpSolver pnp_solver("/home/user/wxy/ArmorDetect_CV/config/demo.yaml");
-        Tracker tracker("/home/user/wxy/ArmorDetect_CV/config/demo.yaml", pnp_solver);
+        PnpSolver pnp_solver("/home/wxy/ArmorDetect_CV/config/demo.yaml");
+        Tracker tracker("/home/wxy/ArmorDetect_CV/config/demo.yaml", pnp_solver);
         std::cout << "[Debug] Detector instance: " << &detector << std::endl;
         std::cout << "[Debug] PnpSolver instance: " << &pnp_solver << std::endl;
         std::cout << "[Debug] Tracker instance: " << &tracker << std::endl;
