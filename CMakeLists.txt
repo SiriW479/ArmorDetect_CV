@@ -65,11 +65,6 @@ add_executable(vedio_test test/auto_aim_vedio_test.cpp ${SOURCES})
 # 编译检测测试可执行文件
 add_executable(detect_test test/detect_test.cpp ${SOURCES})
 
-# ============================================================================
-# 消融实验可执行文件
-# ============================================================================
-add_executable(ablation_study_test test/ablation_study_test.cpp ${SOURCES})
-
 # 编译摄像头测试可执行文件
 # add_executable(camera_test test/camera_auto_aim_test.cpp ${SOURCES})
 
@@ -82,7 +77,6 @@ add_executable(ablation_study_test test/ablation_study_test.cpp ${SOURCES})
 # 链接测试可执行文件
 target_link_libraries(vedio_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
 target_link_libraries(detect_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
-target_link_libraries(ablation_study_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
 # target_link_libraries(camera_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
 # target_link_libraries(imu_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
 
@@ -90,7 +84,6 @@ target_link_libraries(ablation_study_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yam
 # 添加编译选项
 target_compile_options(vedio_test PRIVATE -Wall -Wextra)
 target_compile_options(detect_test PRIVATE -Wall -Wextra)
-target_compile_options(ablation_study_test PRIVATE -Wall -Wextra)
 # target_compile_options(camera_test PRIVATE -Wall -Wextra)
 # target_compile_options(imu_test PRIVATE -Wall -Wextra)
 
@@ -101,12 +94,6 @@ set(CMAKE_BUILD_TYPE Debug)
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_options(vedio_test PRIVATE -g)
     target_compile_options(detect_test PRIVATE -g)
-    target_compile_options(ablation_study_test PRIVATE -g)
     # target_compile_options(camera_test PRIVATE -g)
     # target_compile_options(imu_test PRIVATE -g)
 endif()
-
-# 消融实验消息
-message(STATUS "Build configuration:")
-message(STATUS "  Executable targets: vedio_test, detect_test, ablation_study_test")
-message(STATUS "  Ablation study test configured successfully")
