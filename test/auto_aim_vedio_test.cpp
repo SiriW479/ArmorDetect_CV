@@ -3,12 +3,15 @@
 #include "utils/draw.hpp"
 #include "pnp_solver.hpp"
 #include "tracker.hpp"
-#include "utils/draw.hpp"
+#include "aimer.hpp"
 #include <opencv2/opencv.hpp>
 #include <chrono>
 #include <iostream>
 #include <iomanip>
 #include <sstream>
+#include <optional>
+#include <list>
+#include <Eigen/Dense>
 
 using namespace armor_task;
 
@@ -20,6 +23,10 @@ cv::Mat distort_coeffs = (cv::Mat_<double>(1, 5) << 0, 0, 0, 0, 0);
 
 // 测试视频路径
 std::string video_path = "/home/wxy/Downloads/circular1.avi";
+
+// 配置路径及弹速
+const std::string config_path = "/home/wxy/ArmorDetect_CV/config/demo.yaml";
+double bullet_speed = 23.0;
 
 // // 绘制装甲板检测结果
 // void drawArmorDetection(cv::Mat& img, const ArmorArray& armors) {
@@ -191,11 +198,17 @@ int main(int argc, char *argv[])
 {
     try
     {
+        // 加载相机参数
+        auto camera_params = loadCameraParameters(config_path);
+        camera_matrix = camera_params.first;
+        distort_coeffs = camera_params.second;
+
         // 实例化功能组件
         std::cout << "Initializing components..." << std::endl;
         Detector detector;
-        PnpSolver pnp_solver("/home/wxy/ArmorDetect_CV/config/demo.yaml");
-        Tracker tracker("/home/wxy/ArmorDetect_CV/config/demo.yaml", pnp_solver);
+        PnpSolver pnp_solver(config_path);
+        Tracker tracker(config_path, pnp_solver);
+        Aimer aimer(config_path);
         std::cout << "[Debug] Detector instance: " << &detector << std::endl;
         std::cout << "[Debug] PnpSolver instance: " << &pnp_solver << std::endl;
         std::cout << "[Debug] Tracker instance: " << &tracker << std::endl;
@@ -228,6 +241,9 @@ int main(int argc, char *argv[])
         std::cout << "Press 'q' to quit, 'p' to pause/resume, SPACE to step frame" << std::endl;
 
         bool paused = false;
+        std::optional<io::Command> latest_autoaim_cmd;
+        AimPoint latest_aim_point{false, Eigen::Vector4d::Zero()};
+        double latest_autoaim_time_ms = 0.0;
 
         while (true)
         {
@@ -275,11 +291,33 @@ int main(int argc, char *argv[])
                 auto track_end = std::chrono::steady_clock::now();
                 double track_time = std::chrono::duration<double, std::milli>(track_end - track_start).count();
 
+                if (!targets.empty())
+                {
+                    std::list<Target> target_list(targets.begin(), targets.end());
+                    auto aim_start = std::chrono::steady_clock::now();
+                    io::Command auto_cmd = aimer.aim(target_list, frame_start, bullet_speed);
+                    auto aim_end = std::chrono::steady_clock::now();
+                    latest_autoaim_time_ms = std::chrono::duration<double, std::milli>(aim_end - aim_start).count();
+                    latest_autoaim_cmd = auto_cmd;
+                    latest_aim_point = aimer.debug_aim_point;
+                }
+                else
+                {
+                    latest_autoaim_cmd.reset();
+                    latest_aim_point = {false, Eigen::Vector4d::Zero()};
+                    latest_autoaim_time_ms = 0.0;
+                }
+
                 // 绘制检测结果
                 drawArmorDetection(display_frame, detected_armors);
 
                 // 绘制Target详细信息
                 drawTargetInfo(display_frame, targets, tracker.state(), pnp_solver);
+
+                if (latest_aim_point.valid)
+                {
+                    drawTrajectory(display_frame, latest_aim_point, bullet_speed, config_path, camera_matrix, distort_coeffs);
+                }
 
                 // 计算FPS
                 auto current_time = std::chrono::steady_clock::now();
@@ -292,6 +330,52 @@ int main(int argc, char *argv[])
 
                 // 显示性能信息
                 drawPerformanceInfo(display_frame, fps, detect_time, track_time);
+
+                // 显示自动瞄准状态与角度
+                int aim_state_y = display_frame.rows - 100;
+                if (aim_state_y < 40) aim_state_y = 40;
+                int aim_angle_y = aim_state_y + 25;
+                int aim_meta_y = aim_angle_y + 25;
+                cv::Scalar aim_color = (latest_autoaim_cmd && latest_autoaim_cmd->valid) ? cv::Scalar(0, 255, 0) : cv::Scalar(0, 0, 255);
+
+                std::string aim_state_text = "AutoAim: ";
+                if (!latest_autoaim_cmd)
+                {
+                    aim_state_text += "No target";
+                }
+                else if (latest_autoaim_cmd->valid)
+                {
+                    aim_state_text += latest_autoaim_cmd->shoot ? "Shoot" : "Locked";
+                }
+                else
+                {
+                    aim_state_text += "Invalid";
+                }
+                cv::putText(display_frame, aim_state_text, cv::Point(10, aim_state_y), cv::FONT_HERSHEY_SIMPLEX, 0.55, aim_color, 2);
+
+                if (latest_autoaim_cmd)
+                {
+                    std::ostringstream angles_ss;
+                    angles_ss << std::fixed << std::setprecision(2);
+                    angles_ss << "Yaw:" << latest_autoaim_cmd->yaw * 180.0 / CV_PI << "deg  ";
+                    angles_ss << "Pitch:" << latest_autoaim_cmd->pitch * 180.0 / CV_PI << "deg";
+                    cv::putText(display_frame, angles_ss.str(), cv::Point(10, aim_angle_y), cv::FONT_HERSHEY_SIMPLEX, 0.5, aim_color, 1);
+
+                    std::ostringstream meta_ss;
+                    meta_ss << std::fixed << std::setprecision(2);
+                    meta_ss << "AimT:" << latest_autoaim_time_ms << "ms";
+                    if (latest_aim_point.valid)
+                    {
+                        Eigen::Vector3d aim_xyz = latest_aim_point.xyza.head<3>();
+                        meta_ss << " Dist:" << aim_xyz.norm();
+                    }
+                    cv::putText(display_frame, meta_ss.str(), cv::Point(10, aim_meta_y), cv::FONT_HERSHEY_SIMPLEX, 0.5, aim_color, 1);
+                }
+                else
+                {
+                    cv::putText(display_frame, "Yaw/Pitch: N/A", cv::Point(10, aim_angle_y), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(200, 200, 200), 1);
+                    cv::putText(display_frame, "AimT: --", cv::Point(10, aim_meta_y), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(200, 200, 200), 1);
+                }
 
                 // 显示进度信息
                 std::string progress = "Frame: " + std::to_string(frame_count) + "/" + std::to_string(total_frames);
