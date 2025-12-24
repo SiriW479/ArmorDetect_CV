@@ -6,16 +6,14 @@
 #include "../tools/math_tools.hpp"
 #include <opencv2/core/eigen.hpp>
 
-constexpr double LIGHTBAR_LENGTH = 56e-3;     // m
-constexpr double BIG_ARMOR_WIDTH = 230e-3;    // m
-constexpr double SMALL_ARMOR_WIDTH = 135e-3;  // m
-
-const std::vector<cv::Point3f> BIG_ARMOR_POINTS{
+// 定义静态常量
+const std::vector<cv::Point3f> PnpSolver::BIG_ARMOR_POINTS{
   {0, BIG_ARMOR_WIDTH / 2, LIGHTBAR_LENGTH / 2},
   {0, -BIG_ARMOR_WIDTH / 2, LIGHTBAR_LENGTH / 2},
   {0, -BIG_ARMOR_WIDTH / 2, -LIGHTBAR_LENGTH / 2},
   {0, BIG_ARMOR_WIDTH / 2, -LIGHTBAR_LENGTH / 2}};
-const std::vector<cv::Point3f> SMALL_ARMOR_POINTS{
+
+const std::vector<cv::Point3f> PnpSolver::SMALL_ARMOR_POINTS{
   {0, SMALL_ARMOR_WIDTH / 2, LIGHTBAR_LENGTH / 2},
   {0, -SMALL_ARMOR_WIDTH / 2, LIGHTBAR_LENGTH / 2},
   {0, -SMALL_ARMOR_WIDTH / 2, -LIGHTBAR_LENGTH / 2},

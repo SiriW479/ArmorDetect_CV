@@ -51,6 +51,13 @@ class PnpSolver
     std::vector<cv::Point2f> reproject_armor(const Eigen::Vector3d & p_world, double yaw, int car_num, bool islarge) const ;
 
     double SJTU_cost(const std::vector<cv::Point2f> & cv_refs, const std::vector<cv::Point2f> & cv_pts,const double & inclined) const ;
+
+    // 装甲板3D坐标（用于消融实验）
+    static constexpr double LIGHTBAR_LENGTH = 56e-3;     // m
+    static constexpr double BIG_ARMOR_WIDTH = 230e-3;    // m
+    static constexpr double SMALL_ARMOR_WIDTH = 135e-3;  // m
+    static const std::vector<cv::Point3f> BIG_ARMOR_POINTS;
+    static const std::vector<cv::Point3f> SMALL_ARMOR_POINTS;
   
   private:
     cv::Mat camera_matrix_;                 // 相机内参矩阵
