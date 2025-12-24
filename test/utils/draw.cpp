@@ -6,6 +6,9 @@
 #include <sstream>
 #include <yaml-cpp/yaml.h>
 #include <Eigen/Dense>
+#include <cmath>
+#include "../../tasks/aimer.hpp"
+#include "../../tasks/trajectory_normal.hpp"
 
 namespace tools {
 
@@ -169,6 +172,97 @@ void plotSingleArmor(const Armor &target, const Armor &armor, cv::Mat &img)
 }
 
 } // namespace tools
+
+// ============================================================================
+// 弹道辅助计算（匿名命名空间，仅本文件使用）
+// ============================================================================
+namespace {
+constexpr double kGravity = 9.7833;
+
+// 计算物理弹道在世界系下的轨迹点
+std::vector<Eigen::Vector3d> calculateTrajectoryPoints(const Eigen::Vector3d &start_pos,
+                                                       const Eigen::Vector3d &target_pos,
+                                                       double bullet_speed,
+                                                       int num_points = 50)
+{
+    std::vector<Eigen::Vector3d> trajectory_points;
+
+    Eigen::Vector3d diff = target_pos - start_pos;
+    double d = std::sqrt(diff.x() * diff.x() + diff.y() * diff.y());
+    double h = diff.z();
+
+    ::tools::Trajectory traj(bullet_speed, d, h);
+    if (traj.unsolvable)
+    {
+        return trajectory_points;
+    }
+
+    double yaw = std::atan2(diff.y(), diff.x());
+    double v0_x = bullet_speed * std::cos(traj.pitch) * std::cos(yaw);
+    double v0_y = bullet_speed * std::cos(traj.pitch) * std::sin(yaw);
+    double v0_z = bullet_speed * std::sin(traj.pitch);
+
+    double dt = traj.fly_time / static_cast<double>(num_points);
+    for (int i = 0; i <= num_points; ++i)
+    {
+        double t = i * dt;
+        if (t > traj.fly_time) t = traj.fly_time;
+
+        double x = start_pos.x() + v0_x * t;
+        double y = start_pos.y() + v0_y * t;
+        double z = start_pos.z() + v0_z * t - 0.5 * kGravity * t * t;
+        trajectory_points.emplace_back(x, y, z);
+    }
+
+    return trajectory_points;
+}
+
+// 加载外参矩阵（相机->云台，云台->世界）
+void loadTransformMatrices(const std::string &config_path, Eigen::Matrix3d &R_camera2gimbal,
+                           Eigen::Vector3d &t_camera2gimbal, Eigen::Matrix3d &R_gimbal2world)
+{
+    YAML::Node yaml = YAML::LoadFile(config_path);
+
+    auto R_camera2gimbal_data = yaml["R_camera2gimbal"].as<std::vector<double>>();
+    auto t_camera2gimbal_data = yaml["t_camera2gimbal"].as<std::vector<double>>();
+
+    R_camera2gimbal = Eigen::Matrix<double, 3, 3, Eigen::RowMajor>(R_camera2gimbal_data.data());
+    t_camera2gimbal = Eigen::Matrix<double, 3, 1>(t_camera2gimbal_data.data());
+
+    // 当前环境缺少 IMU，先假设云台坐标系与世界坐标系重合
+    R_gimbal2world = Eigen::Matrix3d::Identity();
+}
+
+// 将世界系轨迹投影到图像
+std::vector<cv::Point2f> projectTrajectoryToImage(const std::vector<Eigen::Vector3d> &world_points,
+                                                  const Eigen::Matrix3d &R_camera2gimbal,
+                                                  const Eigen::Vector3d &t_camera2gimbal,
+                                                  const Eigen::Matrix3d &R_gimbal2world,
+                                                  const cv::Mat &camera_matrix,
+                                                  const cv::Mat &distort_coeffs)
+{
+    std::vector<cv::Point2f> image_points;
+    std::vector<cv::Point3f> camera_points;
+
+    for (const auto &pt_world : world_points)
+    {
+        Eigen::Vector3d pt_camera = R_camera2gimbal.transpose() * (R_gimbal2world.transpose() * pt_world - t_camera2gimbal);
+        if (pt_camera.z() > 0.1)
+        {
+            camera_points.emplace_back(static_cast<float>(pt_camera.x()), static_cast<float>(pt_camera.y()), static_cast<float>(pt_camera.z()));
+        }
+    }
+
+    if (camera_points.empty())
+    {
+        return image_points;
+    }
+
+    cv::projectPoints(camera_points, cv::Mat::zeros(3, 1, CV_64F), cv::Mat::zeros(3, 1, CV_64F),
+                      camera_matrix, distort_coeffs, image_points);
+    return image_points;
+}
+} // namespace
 
 // 从YAML配置文件加载相机参数
 std::pair<cv::Mat, cv::Mat> loadCameraParameters(const std::string& config_path)
@@ -350,6 +444,71 @@ void drawPerformanceInfo(cv::Mat& img, double fps, double detect_time, double tr
     std::string track_text = "Track: " + std::to_string(track_time).substr(0, 5) + "ms";
     tools::draw_text(img, track_text, cv::Point(x_pos, y_offset), 
                      cv::Scalar(255, 255, 255), 0.5, 1);
+}
+
+void drawTrajectory(cv::Mat &img, const AimPoint &aim_point, double bullet_speed,
+                    const std::string &config_path, const cv::Mat &camera_matrix,
+                    const cv::Mat &distort_coeffs)
+{
+    if (!aim_point.valid) return;
+    if (bullet_speed <= 0) bullet_speed = 23.0;
+
+    Eigen::Matrix3d R_camera2gimbal;
+    Eigen::Vector3d t_camera2gimbal;
+    Eigen::Matrix3d R_gimbal2world;
+    try
+    {
+        loadTransformMatrices(config_path, R_camera2gimbal, t_camera2gimbal, R_gimbal2world);
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Failed to load transform matrices: " << e.what() << std::endl;
+        return;
+    }
+
+    // 枪口位置（相机系固定偏移）
+    Eigen::Vector3d muzzle_pos_cam(0.1, 0.1, 0.5);
+    cv::Point3f muzzle_pos_cam_cv(static_cast<float>(muzzle_pos_cam.x()),
+                                  static_cast<float>(muzzle_pos_cam.y()),
+                                  static_cast<float>(muzzle_pos_cam.z()));
+    std::vector<cv::Point3f> local_points = {muzzle_pos_cam_cv};
+    std::vector<cv::Point2f> local_pixels;
+    cv::projectPoints(local_points, cv::Mat::zeros(3, 1, CV_64F), cv::Mat::zeros(3, 1, CV_64F),
+                      camera_matrix, distort_coeffs, local_pixels);
+    if (local_pixels.empty()) return;
+    cv::Point2f fixed_start_pixel = local_pixels.front();
+
+    // 计算物理弹道
+    Eigen::Vector3d start_gimbal = R_camera2gimbal * muzzle_pos_cam + t_camera2gimbal;
+    Eigen::Vector3d start_pos_world = R_gimbal2world * start_gimbal;
+    Eigen::Vector3d target_pos_world = aim_point.xyza.head<3>();
+    auto trajectory_points = calculateTrajectoryPoints(start_pos_world, target_pos_world, bullet_speed, 50);
+    if (trajectory_points.empty()) return;
+
+    // 投影到图像并绘制
+    auto image_points = projectTrajectoryToImage(trajectory_points, R_camera2gimbal, t_camera2gimbal,
+                                                 R_gimbal2world, camera_matrix, distort_coeffs);
+    if (image_points.size() < 2) return;
+
+    image_points[0] = fixed_start_pixel;
+
+    if (fixed_start_pixel.x >= 0 && fixed_start_pixel.x < img.cols && fixed_start_pixel.y >= 0 && fixed_start_pixel.y < img.rows)
+    {
+        cv::circle(img, fixed_start_pixel, 6, cv::Scalar(0, 255, 0), 2);
+    }
+
+    cv::Scalar trajectory_color(0, 255, 255);
+    for (size_t i = 0; i + 1 < image_points.size(); ++i)
+    {
+        bool p1_in = image_points[i].x >= 0 && image_points[i].x < img.cols && image_points[i].y >= 0 && image_points[i].y < img.rows;
+        bool p2_in = image_points[i + 1].x >= 0 && image_points[i + 1].x < img.cols && image_points[i + 1].y >= 0 && image_points[i + 1].y < img.rows;
+        if (p1_in && p2_in)
+        {
+            cv::line(img, image_points[i], image_points[i + 1], trajectory_color, 2, cv::LINE_AA);
+        }
+    }
+
+    cv::circle(img, image_points.back(), 4, cv::Scalar(0, 0, 255), -1);
 }
 
 // 绘制Target详细信息 (deprecated)

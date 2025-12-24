@@ -9,6 +9,8 @@
 #include "../include/armor.hpp"
 #include "tracker.hpp"
 #include "pnp_solver.hpp"
+// Forward declaration to avoid heavy include; defined in tasks/aimer.hpp
+struct AimPoint;
 
 using namespace armor_task;
 
@@ -33,5 +35,9 @@ std::pair<cv::Mat, cv::Mat> loadCameraParameters(const std::string& config_path)
 void drawArmorDetection(cv::Mat& img, const ArmorArray& armors);
 void drawTargetInfo(cv::Mat& img, const std::vector<Target>& targets, const std::string& tracker_state, const PnpSolver& pnp_solver);
 void drawPerformanceInfo(cv::Mat& img, double fps, double detect_time, double track_time);
+// 绘制弹道轨迹（基于 AimPoint）
+void drawTrajectory(cv::Mat &img, const AimPoint &aim_point, double bullet_speed,
+                    const std::string &config_path, const cv::Mat &camera_matrix,
+                    const cv::Mat &distort_coeffs);
 
 #endif // DRAW_HPP
