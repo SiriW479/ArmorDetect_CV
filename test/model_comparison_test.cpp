@@ -129,7 +129,7 @@ int main() {
     if (cap.get(cv::CAP_PROP_FPS) > 0) fps = cap.get(cv::CAP_PROP_FPS);
     
     std::ofstream csv("model_comparison_results.csv");
-    csv << "Frame,Time,ArmorID,Error_Polar,Error_Cartesian\n";
+    csv << "Frame,Time,ArmorID,Truth_X,Truth_Y,Truth_Z,Pred_Polar_X,Pred_Polar_Y,Pred_Polar_Z,Pred_Cart_X,Pred_Cart_Y,Pred_Cart_Z,Error_Polar,Error_Cartesian\n";
 
     cv::Mat frame;
     int frame_count = 0;
@@ -188,13 +188,20 @@ int main() {
                     
                     // Polar Error: Min distance to any of the 4 predicted armors
                     double err_polar = 1e9;
+                    Eigen::Vector3d best_polar_pred = Eigen::Vector3d::Zero();
                     for (const auto& p : rec.polar_armors) {
                         double d = (p - truth).norm();
-                        if (d < err_polar) err_polar = d;
+                        if (d < err_polar) {
+                            err_polar = d;
+                            best_polar_pred = p;
+                        }
                     }
                     
                     // Log
                     csv << frame_count << "," << current_time << "," << best_armor->car_num << "," 
+                        << truth(0) << "," << truth(1) << "," << truth(2) << ","
+                        << best_polar_pred(0) << "," << best_polar_pred(1) << "," << best_polar_pred(2) << ","
+                        << rec.pred_cartesian(0) << "," << rec.pred_cartesian(1) << "," << rec.pred_cartesian(2) << ","
                         << err_polar << "," << err_cart << "\n";
                         
                     if (frame_count % 30 == 0) {
