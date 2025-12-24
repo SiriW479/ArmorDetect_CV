@@ -70,6 +70,16 @@ add_executable(detect_test test/detect_test.cpp ${SOURCES})
 # ============================================================================
 add_executable(ablation_study_test test/ablation_study_test.cpp ${SOURCES})
 
+# ============================================================================
+# 模型对比实验可执行文件
+# ============================================================================
+add_executable(model_comparison_test test/model_comparison_test.cpp ${SOURCES})
+target_link_libraries(model_comparison_test ${OpenCV_LIBS} ${EIGEN3_LIBRARIES} yaml-cpp spdlog::spdlog pthread)
+target_compile_options(model_comparison_test PRIVATE -Wall -Wextra)
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_options(model_comparison_test PRIVATE -g)
+endif()
+
 # 编译摄像头测试可执行文件
 # add_executable(camera_test test/camera_auto_aim_test.cpp ${SOURCES})
 
@@ -108,5 +118,5 @@ endif()
 
 # 消融实验消息
 message(STATUS "Build configuration:")
-message(STATUS "  Executable targets: vedio_test, detect_test, ablation_study_test")
-message(STATUS "  Ablation study test configured successfully")
+message(STATUS "  Executable targets: vedio_test, detect_test, ablation_study_test, model_comparison_test")
+message(STATUS "  Model comparison test configured successfully")
