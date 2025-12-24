@@ -73,4 +73,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/vedio_test.dir/DependInfo.cmake"
   "CMakeFiles/detect_test.dir/DependInfo.cmake"
   "CMakeFiles/ablation_study_test.dir/DependInfo.cmake"
+  "CMakeFiles/model_comparison_test.dir/DependInfo.cmake"
   )

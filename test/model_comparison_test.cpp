@@ -92,8 +92,11 @@ struct PredictionRecord {
 };
 
 // Config paths
-const std::string video_path = "./test_video.avi"; 
-const std::string config_path = "./config/demo.yaml";
+// 测试视频路径
+std::string video_path = "/home/wxy/Downloads/circular1.avi";
+
+// 配置路径
+const std::string config_path = "/home/wxy/ArmorDetect_CV/config/demo.yaml";
 
 int main() {
     std::cout << "=== Model Comparison: Polar EKF vs Cartesian EKF ===" << std::endl;

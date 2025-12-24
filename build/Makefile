@@ -155,6 +155,19 @@ ablation_study_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/build
 .PHONY : ablation_study_test/fast
 
+#=============================================================================
+# Target rules for targets named model_comparison_test
+
+# Build rule for target.
+model_comparison_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 model_comparison_test
+.PHONY : model_comparison_test
+
+# fast build rule for target.
+model_comparison_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/build
+.PHONY : model_comparison_test/fast
+
 io/communication.o: io/communication.cpp.o
 .PHONY : io/communication.o
 
@@ -163,6 +176,7 @@ io/communication.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/io/communication.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/io/communication.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/io/communication.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/io/communication.cpp.o
 .PHONY : io/communication.cpp.o
 
 io/communication.i: io/communication.cpp.i
@@ -173,6 +187,7 @@ io/communication.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/io/communication.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/io/communication.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/io/communication.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/io/communication.cpp.i
 .PHONY : io/communication.cpp.i
 
 io/communication.s: io/communication.cpp.s
@@ -183,6 +198,7 @@ io/communication.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/io/communication.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/io/communication.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/io/communication.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/io/communication.cpp.s
 .PHONY : io/communication.cpp.s
 
 tasks/aimer.o: tasks/aimer.cpp.o
@@ -193,6 +209,7 @@ tasks/aimer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/aimer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/aimer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/aimer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/aimer.cpp.o
 .PHONY : tasks/aimer.cpp.o
 
 tasks/aimer.i: tasks/aimer.cpp.i
@@ -203,6 +220,7 @@ tasks/aimer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/aimer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/aimer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/aimer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/aimer.cpp.i
 .PHONY : tasks/aimer.cpp.i
 
 tasks/aimer.s: tasks/aimer.cpp.s
@@ -213,6 +231,7 @@ tasks/aimer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/aimer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/aimer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/aimer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/aimer.cpp.s
 .PHONY : tasks/aimer.cpp.s
 
 tasks/detector.o: tasks/detector.cpp.o
@@ -223,6 +242,7 @@ tasks/detector.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/detector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/detector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/detector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/detector.cpp.o
 .PHONY : tasks/detector.cpp.o
 
 tasks/detector.i: tasks/detector.cpp.i
@@ -233,6 +253,7 @@ tasks/detector.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/detector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/detector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/detector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/detector.cpp.i
 .PHONY : tasks/detector.cpp.i
 
 tasks/detector.s: tasks/detector.cpp.s
@@ -243,6 +264,7 @@ tasks/detector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/detector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/detector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/detector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/detector.cpp.s
 .PHONY : tasks/detector.cpp.s
 
 tasks/ekf.o: tasks/ekf.cpp.o
@@ -253,6 +275,7 @@ tasks/ekf.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/ekf.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/ekf.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/ekf.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/ekf.cpp.o
 .PHONY : tasks/ekf.cpp.o
 
 tasks/ekf.i: tasks/ekf.cpp.i
@@ -263,6 +286,7 @@ tasks/ekf.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/ekf.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/ekf.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/ekf.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/ekf.cpp.i
 .PHONY : tasks/ekf.cpp.i
 
 tasks/ekf.s: tasks/ekf.cpp.s
@@ -273,6 +297,7 @@ tasks/ekf.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/ekf.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/ekf.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/ekf.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/ekf.cpp.s
 .PHONY : tasks/ekf.cpp.s
 
 tasks/pnp_solver.o: tasks/pnp_solver.cpp.o
@@ -283,6 +308,7 @@ tasks/pnp_solver.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/pnp_solver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/pnp_solver.cpp.o
 .PHONY : tasks/pnp_solver.cpp.o
 
 tasks/pnp_solver.i: tasks/pnp_solver.cpp.i
@@ -293,6 +319,7 @@ tasks/pnp_solver.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/pnp_solver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/pnp_solver.cpp.i
 .PHONY : tasks/pnp_solver.cpp.i
 
 tasks/pnp_solver.s: tasks/pnp_solver.cpp.s
@@ -303,6 +330,7 @@ tasks/pnp_solver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/pnp_solver.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/pnp_solver.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/pnp_solver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/pnp_solver.cpp.s
 .PHONY : tasks/pnp_solver.cpp.s
 
 tasks/target.o: tasks/target.cpp.o
@@ -313,6 +341,7 @@ tasks/target.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/target.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/target.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/target.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/target.cpp.o
 .PHONY : tasks/target.cpp.o
 
 tasks/target.i: tasks/target.cpp.i
@@ -323,6 +352,7 @@ tasks/target.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/target.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/target.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/target.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/target.cpp.i
 .PHONY : tasks/target.cpp.i
 
 tasks/target.s: tasks/target.cpp.s
@@ -333,6 +363,7 @@ tasks/target.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/target.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/target.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/target.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/target.cpp.s
 .PHONY : tasks/target.cpp.s
 
 tasks/tracker.o: tasks/tracker.cpp.o
@@ -343,6 +374,7 @@ tasks/tracker.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/tracker.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/tracker.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/tracker.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/tracker.cpp.o
 .PHONY : tasks/tracker.cpp.o
 
 tasks/tracker.i: tasks/tracker.cpp.i
@@ -353,6 +385,7 @@ tasks/tracker.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/tracker.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/tracker.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/tracker.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/tracker.cpp.i
 .PHONY : tasks/tracker.cpp.i
 
 tasks/tracker.s: tasks/tracker.cpp.s
@@ -363,6 +396,7 @@ tasks/tracker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/tracker.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/tracker.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/tracker.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/tracker.cpp.s
 .PHONY : tasks/tracker.cpp.s
 
 tasks/trajectory_normal.o: tasks/trajectory_normal.cpp.o
@@ -373,6 +407,7 @@ tasks/trajectory_normal.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/trajectory_normal.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/trajectory_normal.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/trajectory_normal.cpp.o
 .PHONY : tasks/trajectory_normal.cpp.o
 
 tasks/trajectory_normal.i: tasks/trajectory_normal.cpp.i
@@ -383,6 +418,7 @@ tasks/trajectory_normal.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/trajectory_normal.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/trajectory_normal.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/trajectory_normal.cpp.i
 .PHONY : tasks/trajectory_normal.cpp.i
 
 tasks/trajectory_normal.s: tasks/trajectory_normal.cpp.s
@@ -393,6 +429,7 @@ tasks/trajectory_normal.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tasks/trajectory_normal.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tasks/trajectory_normal.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tasks/trajectory_normal.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tasks/trajectory_normal.cpp.s
 .PHONY : tasks/trajectory_normal.cpp.s
 
 test/ablation_study_test.o: test/ablation_study_test.cpp.o
@@ -467,6 +504,30 @@ test/detect_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/detect_test.cpp.s
 .PHONY : test/detect_test.cpp.s
 
+test/model_comparison_test.o: test/model_comparison_test.cpp.o
+.PHONY : test/model_comparison_test.o
+
+# target to build an object file
+test/model_comparison_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/test/model_comparison_test.cpp.o
+.PHONY : test/model_comparison_test.cpp.o
+
+test/model_comparison_test.i: test/model_comparison_test.cpp.i
+.PHONY : test/model_comparison_test.i
+
+# target to preprocess a source file
+test/model_comparison_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/test/model_comparison_test.cpp.i
+.PHONY : test/model_comparison_test.cpp.i
+
+test/model_comparison_test.s: test/model_comparison_test.cpp.s
+.PHONY : test/model_comparison_test.s
+
+# target to generate assembly for a file
+test/model_comparison_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/test/model_comparison_test.cpp.s
+.PHONY : test/model_comparison_test.cpp.s
+
 test/utils/draw.o: test/utils/draw.cpp.o
 .PHONY : test/utils/draw.o
 
@@ -475,6 +536,7 @@ test/utils/draw.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/test/utils/draw.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/utils/draw.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/utils/draw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/test/utils/draw.cpp.o
 .PHONY : test/utils/draw.cpp.o
 
 test/utils/draw.i: test/utils/draw.cpp.i
@@ -485,6 +547,7 @@ test/utils/draw.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/test/utils/draw.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/utils/draw.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/utils/draw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/test/utils/draw.cpp.i
 .PHONY : test/utils/draw.cpp.i
 
 test/utils/draw.s: test/utils/draw.cpp.s
@@ -495,6 +558,7 @@ test/utils/draw.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/test/utils/draw.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/test/utils/draw.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/test/utils/draw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/test/utils/draw.cpp.s
 .PHONY : test/utils/draw.cpp.s
 
 tools/logger.o: tools/logger.cpp.o
@@ -505,6 +569,7 @@ tools/logger.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tools/logger.cpp.o
 .PHONY : tools/logger.cpp.o
 
 tools/logger.i: tools/logger.cpp.i
@@ -515,6 +580,7 @@ tools/logger.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tools/logger.cpp.i
 .PHONY : tools/logger.cpp.i
 
 tools/logger.s: tools/logger.cpp.s
@@ -525,6 +591,7 @@ tools/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tools/logger.cpp.s
 .PHONY : tools/logger.cpp.s
 
 tools/math_tools.o: tools/math_tools.cpp.o
@@ -535,6 +602,7 @@ tools/math_tools.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/math_tools.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/math_tools.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/math_tools.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tools/math_tools.cpp.o
 .PHONY : tools/math_tools.cpp.o
 
 tools/math_tools.i: tools/math_tools.cpp.i
@@ -545,6 +613,7 @@ tools/math_tools.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/math_tools.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/math_tools.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/math_tools.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tools/math_tools.cpp.i
 .PHONY : tools/math_tools.cpp.i
 
 tools/math_tools.s: tools/math_tools.cpp.s
@@ -555,6 +624,7 @@ tools/math_tools.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vedio_test.dir/build.make CMakeFiles/vedio_test.dir/tools/math_tools.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_test.dir/build.make CMakeFiles/detect_test.dir/tools/math_tools.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ablation_study_test.dir/build.make CMakeFiles/ablation_study_test.dir/tools/math_tools.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_comparison_test.dir/build.make CMakeFiles/model_comparison_test.dir/tools/math_tools.cpp.s
 .PHONY : tools/math_tools.cpp.s
 
 # Help Target
@@ -567,6 +637,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ablation_study_test"
 	@echo "... detect_test"
+	@echo "... model_comparison_test"
 	@echo "... vedio_test"
 	@echo "... io/communication.o"
 	@echo "... io/communication.i"
@@ -601,6 +672,9 @@ help:
 	@echo "... test/detect_test.o"
 	@echo "... test/detect_test.i"
 	@echo "... test/detect_test.s"
+	@echo "... test/model_comparison_test.o"
+	@echo "... test/model_comparison_test.i"
+	@echo "... test/model_comparison_test.s"
 	@echo "... test/utils/draw.o"
 	@echo "... test/utils/draw.i"
 	@echo "... test/utils/draw.s"
