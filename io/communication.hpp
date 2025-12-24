@@ -6,10 +6,17 @@
 #include <termios.h>
 
 namespace io {
+
+enum class ShootMode {
+    TRACKING,
+    SHOOT_NOW
+};
+
 struct Command {
+    bool valid;
+    bool shoot;
     float yaw;
     float pitch;
-    
 };
 
 struct imu_data {
